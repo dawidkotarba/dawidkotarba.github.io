@@ -16,10 +16,19 @@
     border-radius: 24px 24px 24px 24px;
     -moz-border-radius: 24px 24px 24px 24px;
     -webkit-border-radius: 24px 24px 24px 24px;
+    transition: transform .2s;
 }
 
 .employment-card:hover {
     border: 2px solid #d1a52d;
+    -webkit-box-shadow: 10px 10px 55px 0px rgba(0,0,0,0.30);
+    -moz-box-shadow: 10px 10px 55px 0px rgba(0,0,0,0.30);
+    box-shadow: 10px 10px 55px 0px rgba(0,0,0,0.30);
+    transform: scale(1.1)
+}
+
+.employment-card:active {
+    transform: scale(1.2);
 }
 
 .employment-div {

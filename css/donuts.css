@@ -1,6 +1,15 @@
 .donutContainer {
     position: relative;
     float: left;
+    transition: transform .2s;
+}
+
+.donutContainer:hover {
+    transform: scale(1.3);
+}
+
+.donutContainer:active {
+    transform: scale(1.5);
 }
 
 .donutContainer h2 {
