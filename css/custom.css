@@ -18,6 +18,10 @@
     -webkit-border-radius: 24px 24px 24px 24px;
 }
 
+.employment-card:hover {
+    border: 2px solid #d1a52d;
+}
+
 .employment-div {
     padding: 20px;
 }
@@ -30,6 +34,6 @@
     border: 2px solid #006ac7;
 }
 
-.border-yellow {
-    border: 2px solid #d1a52d;
+.border-green {
+    border: 2px solid #1b8521;
 }
