@@ -20,14 +20,16 @@
 }
 
 .employment-card:hover {
-    border: 2px solid #d1a52d;
-    -webkit-box-shadow: 10px 10px 55px 0px rgba(0,0,0,0.30);
-    -moz-box-shadow: 10px 10px 55px 0px rgba(0,0,0,0.30);
-    box-shadow: 10px 10px 55px 0px rgba(0,0,0,0.30);
+    -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     transform: scale(1.1)
 }
 
 .employment-card:active {
+    -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     transform: scale(1.2);
 }
 
@@ -45,4 +47,8 @@
 
 .border-green {
     border: 2px solid #1b8521;
+}
+
+.border-yellow {
+    border: 2px solid #d1a52d;
 }
