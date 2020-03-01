@@ -27,13 +27,15 @@
     -moz-border-radius: 24px 24px 24px 24px;
     -webkit-border-radius: 24px 24px 24px 24px;
     transition: transform .2s;
+    background-color: white;
 }
 
 .employment-card:hover {
     -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-    transform: scale(1.1)
+    transform: scale(1.1);
+    background-color: white;
 }
 
 .employment-card:active {
@@ -41,10 +43,16 @@
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     transform: scale(1.2);
+    background-color: white;
 }
 
 .employment-div {
     padding: 20px;
+}
+
+.employment-dotted-line {
+    border-left: 5px dotted grey;
+    padding-left: 15px
 }
 
 .border-purple {
