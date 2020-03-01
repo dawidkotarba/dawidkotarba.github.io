@@ -109,6 +109,10 @@
     max-width: 1000px !important;
 }
 
+.no-padding-wrap {
+    padding-bottom: 0 !important;
+}
+
 .color-blue {
     color: #006ac7;
 }
@@ -149,4 +153,11 @@
 
 .border-yellow {
     border: 2px solid #d1a52d;
+}
+
+.svg-icons {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
 }
