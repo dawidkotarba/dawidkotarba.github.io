@@ -1,11 +1,14 @@
+/*Header image*/
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
     height: 40vh;
 }
 
+/*Content images*/
 .panel-image {
     height: 30vh;
 }
 
+/*Header and content images for desktop*/
 @media screen and (min-width: 79em) {
     .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
         height: 80vh;
@@ -16,34 +19,38 @@
     }
 }
 
+.employment-card {
+    background-color: white;
+    margin-bottom: 30px;
+    width: 100%;
+    /*rounded corners*/
+    border-radius: 24px 24px 24px 24px;
+    -moz-border-radius: 24px 24px 24px 24px;
+    -webkit-border-radius: 24px 24px 24px 24px;
+    /*needed for transition animation*/
+    transition: transform .2s;
+}
+
 .padding-left-30px {
     padding-left: 30px
 }
 
-.employment-card {
-    margin-bottom: 30px;
-    width: 100%;
-    border-radius: 24px 24px 24px 24px;
-    -moz-border-radius: 24px 24px 24px 24px;
-    -webkit-border-radius: 24px 24px 24px 24px;
-    transition: transform .2s;
-    background-color: white;
-}
-
 .employment-card:hover {
+    background-color: white;
     -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    /*Zoom in animation*/
     transform: scale(1.1);
-    background-color: white;
 }
 
 .employment-card:active {
+    background-color: white;
     -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    /*Zoom in animation*/
     transform: scale(1.2);
-    background-color: white;
 }
 
 .employment-div {
