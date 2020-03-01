@@ -8,6 +8,10 @@
     height: 30vh;
 }
 
+.wrap {
+    max-width: 75%;
+}
+
 /*Header and content images for desktop*/
 @media screen and (min-width: 79em) {
     .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
@@ -91,6 +95,18 @@
 .cert-date {
     font-style: italic;
     padding-right: 5px
+}
+
+.hard-skills-wrap {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    max-width: 1000px;
+
+}
+
+.soft-skills-wrap {
+    padding-top: 0px;
+    max-width: 1000px;
 }
 
 .color-blue {
