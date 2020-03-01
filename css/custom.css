@@ -79,6 +79,36 @@
     padding: 20px;
 }
 
+.employment-ul {
+    padding-left: 30px;
+}
+
+.project-title {
+    font-style: italic;
+    display: block;
+}
+
+.color-blue {
+    color: #006ac7;
+}
+
+.color-purple {
+    color: #ba0e56;
+}
+
+.color-green {
+    color: #1b8521;
+}
+
+.color-yellow {
+    color: #d1a52d;
+}
+
+.employer {
+    font-style: italic;
+    color: grey;
+}
+
 .employment-dotted-line {
     border-left: 5px dotted grey;
     padding-left: 15px
