@@ -88,6 +88,10 @@
     display: block;
 }
 
+.cert-date {
+    font-style: italic;
+}
+
 .color-blue {
     color: #006ac7;
 }
