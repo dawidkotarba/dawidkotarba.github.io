@@ -20,6 +20,7 @@
 }
 
 .employment-card {
+    font-size: small;
     background-color: white;
     margin-bottom: 30px;
     width: 100%;
@@ -41,7 +42,7 @@
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     /*Zoom in animation*/
-    transform: scale(1.1);
+    transform: scale(1.5);
 }
 
 .employment-card:active {
@@ -50,7 +51,7 @@
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     /*Zoom in animation*/
-    transform: scale(1.2);
+    transform: scale(1.7);
 }
 
 .employment-div {
