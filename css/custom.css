@@ -42,7 +42,7 @@
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     /*Zoom in animation*/
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 .employment-card:active {
@@ -51,7 +51,28 @@
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     /*Zoom in animation*/
-    transform: scale(1.7);
+    transform: scale(1.2);
+}
+
+/*Desktop employment card hover/active*/
+@media screen and (min-width: 79em) {
+    .employment-card:hover {
+        background-color: white;
+        -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+        -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+        box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+        /*Zoom in animation*/
+        transform: scale(1.5);
+    }
+
+    .employment-card:active {
+        background-color: white;
+        -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+        -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+        box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+        /*Zoom in animation*/
+        transform: scale(1.7);
+    }
 }
 
 .employment-div {
