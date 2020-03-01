@@ -1,10 +1,11 @@
 # dawidkotarba.github.io
 
-My personal site, under construction.
+My resume, under construction forever :)
 
 Credits:
 
-Theme: twenty seventeen from Wordpress
+- Evgeny Ignatik: idea of having such a site with twenty seventeen theme
+- Theme: twenty seventeen from Wordpress
 
 Images from Unsplash by:
 - Victor Malyushev
