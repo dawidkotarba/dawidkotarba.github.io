@@ -22,4 +22,4 @@ echo "Processing CSS..."
 minifyCss fonts ie8 style donuts custom
 printf "\n"
 echo "Processing JS..."
-minifyJs global html5 jquery.scrollTo custom ga
+minifyJs global html5 jquery.scrollTo custom ga ga-tags
