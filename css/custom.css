@@ -80,7 +80,8 @@
 }
 
 .employment-div {
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .employment-ul {
@@ -92,7 +93,7 @@
     display: block;
 }
 
-.cert-date {
+.italic-date {
     font-style: italic;
     padding-right: 5px
 }
