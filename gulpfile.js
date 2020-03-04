@@ -44,6 +44,10 @@ gulp.task('html', async function () {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('watch', function () {
+    gulp.watch('./js/custom.js', gulp.series('js'));
+    gulp.watch(['./css/custom.css','./css/donuts.css' ], gulp.series('css'));
+});
 
 
-gulp.task('default', gulp.series('js', 'css', 'html'));
+gulp.task('default', gulp.series('js', 'css', 'html', 'watch'));
