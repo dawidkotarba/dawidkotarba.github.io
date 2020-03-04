@@ -6,7 +6,7 @@ var rename = require('gulp-rename');
 var minifyHtml = require('gulp-htmlmin');
 
 gulp.task('js', async function () {
-    gulp.src(['./js/jquery.js', './js/jquery-migrate.min.js', './js/jquery.scrollTo.js', './js/global.js', './js/ga-tags.js', './js/custom.js'])
+    gulp.src(['./js/jquery.js', './js/jquery-migrate.min.js', './js/jquery.scrollTo.js', './js/global.js', './js/ga-tags.js','./js/navigation.js',  './js/custom.js'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./js/'));
