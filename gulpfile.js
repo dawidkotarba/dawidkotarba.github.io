@@ -5,7 +5,7 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var minifyHtml = require('gulp-htmlmin');
 
-gulp.task('js', async function () {
+gulp.task('js', (done) => {
     gulp.src(['./js/jquery.js', './js/jquery-migrate.min.js', './js/jquery.scrollTo.js', './js/global.js', './js/ga-tags.js','./js/navigation.js',  './js/custom.js'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())
@@ -20,9 +20,11 @@ gulp.task('js', async function () {
         .pipe(concat('ga.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./js/'))
+
+    done();
 });
 
-gulp.task('css', async function () {
+gulp.task('css', (done) => {
     gulp.src(['./css/style.css', './css/ie8.css', './css/fonts.css', './css/donuts.css', './css/animate.min.css', './css/custom.css'])
         .pipe(concat('bundle.css'))
         .pipe(minifyCss())
@@ -32,22 +34,18 @@ gulp.task('css', async function () {
         .pipe(concat('ie8.min.css'))
         .pipe(minifyCss())
         .pipe(gulp.dest('./css/'));
+    done();
 });
 
-gulp.task('html', async function () {
-    return gulp.src(['./index_dev.html'])
+gulp.task('html', (done) => {
+    gulp.src(['./index_dev.html'])
         .pipe(minifyHtml({
             collapseWhitespace: true,
             removeComments: true
         }))
         .pipe(rename({basename:'index'}))
         .pipe(gulp.dest('./'));
+    done();
 });
 
-gulp.task('watch', function () {
-    gulp.watch('./js/custom.js', gulp.series('js'));
-    gulp.watch(['./css/custom.css','./css/donuts.css' ], gulp.series('css'));
-});
-
-
-gulp.task('default', gulp.series('js', 'css', 'html', 'watch'));
+gulp.task('default', gulp.series('js', 'css', 'html'));
