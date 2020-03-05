@@ -74,9 +74,9 @@ gulp.task('img', function (done) {
 });
 
 gulp.task('watch', function (done) {
-    gulp.watch('./**/js/*.js', gulp.series('js'));
-    gulp.watch('./**/css/*.css', gulp.series('css'));
-    gulp.watch('./**/img/*.*', gulp.series('img'));
+    gulp.watch('js/*.js', gulp.series('js'));
+    gulp.watch('css/*.css', gulp.series('css'));
+    gulp.watch('img/*.*', gulp.series('img'));
     gulp.watch('./**/index_dev.html', gulp.series('html'));
 
     done();
