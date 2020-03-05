@@ -2,8 +2,7 @@
 
 My resume, under construction forever :)
 
-Credits:
-
+###Credits:
 - Evgeny Ignatik: idea of having such a site with twenty seventeen theme
 - Theme: twenty seventeen from Wordpress
 
@@ -14,3 +13,7 @@ Images from Unsplash by:
 - Martin Wilner
 - Aryan Dhiman
 - Esteban Lopez
+
+###Run:
+1. npm install
+2. gulp
