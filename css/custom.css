@@ -34,6 +34,10 @@
     -webkit-border-radius: 24px 24px 24px 24px;
     /*needed for transition animation*/
     transition: transform .2s;
+
+    /*Cutting long text*/
+    max-height: 300px;
+    overflow: hidden;
 }
 
 .padding-left-30px {
@@ -45,8 +49,13 @@
     -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+
     /*Zoom in animation*/
     transform: scale(1.1);
+
+    /*Unset cutting of long text*/
+    max-height: none;
+    overflow: visible;
 }
 
 .employment-card:active {
@@ -67,6 +76,10 @@
         box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
         /*Zoom in animation*/
         transform: scale(1.5);
+
+        /*Unset cutting of long text*/
+        max-height: none;
+        overflow: visible;
     }
 
     .employment-card:active {
