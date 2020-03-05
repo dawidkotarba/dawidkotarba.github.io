@@ -67,9 +67,9 @@
 
 .employment-card:active {
     background-color: white;
-    -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-    -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-    box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 1);
+    box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 1);
     /*Zoom in animation*/
     transform: scale(1.2);
 }
@@ -91,9 +91,9 @@
 
     .employment-card:active {
         background-color: white;
-        -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-        -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-        box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+        -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 1);
+        box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 1);
         /*Zoom in animation*/
         transform: scale(1.7);
     }
