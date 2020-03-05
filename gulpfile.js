@@ -7,6 +7,12 @@ var minifyHtml = require('gulp-htmlmin');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
+var del = require('del');
+
+gulp.task('clean', function (done) {
+    del.sync('dist');
+    done();
+});
 
 gulp.task('js', function () {
     gulp.src(['js/jquery.js', 'js/jquery-migrate.min.js', 'js/jquery.scrollTo.js', 'js/global.js', 'js/ga-tags.js', 'js/navigation.js', 'js/custom.js'])
@@ -81,6 +87,6 @@ gulp.task('browser-sync', function (done) {
 });
 
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
-gulp.task('build', gulp.parallel('js', 'css', 'img', 'html'));
+gulp.task('build', gulp.parallel('clean', 'js', 'css', 'img', 'html'));
 
 gulp.task('default', gulp.parallel('serve'));
