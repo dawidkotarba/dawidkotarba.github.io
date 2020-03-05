@@ -23,6 +23,13 @@
     }
 }
 
+.touch-to-enlarge {
+    text-align: center;
+    color: grey;
+    font-size: small;
+    padding-bottom: 20px
+}
+
 .employment-card {
     font-size: small;
     background-color: white;
