@@ -53,6 +53,7 @@
 
 .employment-card:hover {
     background-color: white;
+    filter: saturate(180%);
     -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
@@ -67,6 +68,7 @@
 
 .employment-card:active {
     background-color: white;
+    filter: saturate(200%);
     -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
@@ -78,6 +80,7 @@
 @media screen and (min-width: 79em) {
     .employment-card:hover {
         background-color: white;
+        filter: saturate(180%);
         -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
         -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
         box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
@@ -91,6 +94,7 @@
 
     .employment-card:active {
         background-color: white;
+        filter: saturate(200%);
         -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
         -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
         box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
