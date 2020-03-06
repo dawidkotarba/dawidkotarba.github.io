@@ -15,7 +15,7 @@ gulp.task('clean', function (done) {
 });
 
 gulp.task('js', function (done) {
-    gulp.src(['js/custom.js', 'js/jquery.js', 'js/jquery-migrate.min.js', 'js/jquery.scrollTo.js', 'js/global.js', 'js/ga-tags.js', 'js/navigation.js'])
+    gulp.src(['js/global.js', 'js/jquery.js', 'js/jquery-migrate.min.js', 'js/jquery.scrollTo.js', 'js/ga-tags.js', 'js/navigation.js'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
