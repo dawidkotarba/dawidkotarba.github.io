@@ -1,7 +1,7 @@
 .donutContainer {
     position: relative;
     float: left;
-    transition: transform .2s;
+    transition: .5s;
 }
 
 .donutContainer:hover {
@@ -9,7 +9,7 @@
 }
 
 .donutContainer:active {
-    transform: scale(1.8);
+    transform: scale(1.9);
 }
 
 .donutContainer h2 {
