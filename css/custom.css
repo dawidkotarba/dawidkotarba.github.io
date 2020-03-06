@@ -9,7 +9,7 @@
 }
 
 .wrap {
-    max-width: 75%;
+    max-width: 80%;
 }
 
 /*Header and content images for desktop*/
@@ -43,7 +43,7 @@
     transition: .5s;
 
     /*Cutting long text*/
-    max-height: 300px;
+    max-height: 245px;
     overflow: hidden;
 }
 
