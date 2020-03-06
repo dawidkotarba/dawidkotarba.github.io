@@ -53,7 +53,7 @@
 
 .employment-card:hover {
     background-color: white;
-    filter: saturate(180%);
+    filter: saturate(150%);
     -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
@@ -80,7 +80,7 @@
 @media screen and (min-width: 79em) {
     .employment-card:hover {
         background-color: white;
-        filter: saturate(180%);
+        filter: saturate(150%);
         -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
         -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
         box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
@@ -188,11 +188,11 @@
 }
 
 .img-transform {
-    filter: brightness(1) saturate(100%);
+    filter: brightness(90%) saturate(90%);
     transition: 1.5s;
 }
 
 .img-transform:hover {
-    filter: brightness(1.3) saturate(140%);
+    filter: brightness(110%) saturate(140%);
     transition: 1.5s;
 }
