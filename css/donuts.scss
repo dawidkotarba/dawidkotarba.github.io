@@ -1,46 +1,46 @@
 .donutContainer {
-    position: relative;
-    float: left;
-    transition: .5s;
-}
+  position: relative;
+  float: left;
+  transition: .5s;
 
-.donutContainer:hover {
+  &:hover {
     transform: scale(1.7);
     filter: brightness(1.3) saturate(140%);
-}
+  }
 
-.donutContainer:active {
+  &:active {
     transform: scale(1.9);
     filter: brightness(1.4) saturate(150%);
+  }
 }
 
 .donutContainer h2 {
-    font-weight: bold;
-    text-align: center;
-    font-size: x-small;
-    position: absolute;
-    line-height: 155px;
-    width: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: x-small;
+  position: absolute;
+  line-height: 155px;
+  width: 100%;
 }
 
 .donutContainer svg {
-    transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .donut {
-    stroke-dasharray: 440;
-    -webkit-animation: donut 1s ease-out forwards;
-    animation: donut 1s ease-out forwards;
+  stroke-dasharray: 440;
+  -webkit-animation: donut 1s ease-out forwards;
+  animation: donut 1s ease-out forwards;
 }
 
 @-webkit-keyframes donut {
-    from {
-        stroke-dashoffset: 440;
-    }
+  from {
+    stroke-dashoffset: 440;
+  }
 }
 
 @keyframes donut {
-    from {
-        stroke-dashoffset: 440;
-    }
+  from {
+    stroke-dashoffset: 440;
+  }
 }

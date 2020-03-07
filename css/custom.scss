@@ -5,58 +5,53 @@ $color-yellow: #d1a52d;
 
 /*Header image*/
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
-    height: 40vh;
+  height: 40vh;
 }
 
 /*Content images*/
 .panel-image {
-    height: 30vh;
+  height: 30vh;
 }
 
 .wrap {
-    max-width: 80%;
+  max-width: 80%;
 }
 
 /*Header and content images for desktop*/
 @media screen and (min-width: 79em) {
-    .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
-        height: 80vh;
-    }
+  .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
+    height: 80vh;
+  }
 
-    .panel-image {
-        height: 55vh;
-    }
+  .panel-image {
+    height: 55vh;
+  }
 }
 
 .enlarge-text {
-    text-align: center;
-    color: grey;
-    font-size: small;
-    padding-bottom: 20px
+  text-align: center;
+  color: grey;
+  font-size: small;
+  padding-bottom: 20px
 }
 
 .employment-card {
-    font-size: small;
-    background-color: white;
-    margin-bottom: 30px;
-    width: 100%;
-    /*rounded corners*/
-    border-radius: 24px 24px 24px 24px;
-    -moz-border-radius: 24px 24px 24px 24px;
-    -webkit-border-radius: 24px 24px 24px 24px;
-    /*needed for transition animation*/
-    transition: .5s;
+  font-size: small;
+  background-color: white;
+  margin-bottom: 30px;
+  width: 100%;
+  /*rounded corners*/
+  border-radius: 24px 24px 24px 24px;
+  -moz-border-radius: 24px 24px 24px 24px;
+  -webkit-border-radius: 24px 24px 24px 24px;
+  /*needed for transition animation*/
+  transition: .5s;
 
-    /*Cutting long text*/
-    max-height: 245px;
-    overflow: hidden;
-}
+  /*Cutting long text*/
+  max-height: 245px;
+  overflow: hidden;
 
-.padding-left-30px {
-    padding-left: 30px
-}
-
-.employment-card:hover {
+  &:hover {
     background-color: white;
     filter: saturate(150%);
     -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
@@ -69,9 +64,9 @@ $color-yellow: #d1a52d;
     /*Unset cutting of long text*/
     max-height: none;
     overflow: visible;
-}
+  }
 
-.employment-card:active {
+  &:active {
     background-color: white;
     filter: saturate(200%);
     -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
@@ -79,125 +74,130 @@ $color-yellow: #d1a52d;
     box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
     /*Zoom in animation*/
     transform: scale(1.2);
+  }
+}
+
+.padding-left-30px {
+  padding-left: 30px
 }
 
 /*Desktop employment card hover/active*/
 @media screen and (min-width: 79em) {
-    .employment-card:hover {
-        background-color: white;
-        filter: saturate(150%);
-        -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-        -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-        box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-        /*Zoom in animation*/
-        transform: scale(1.3);
+  .employment-card:hover {
+    background-color: white;
+    filter: saturate(150%);
+    -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    /*Zoom in animation*/
+    transform: scale(1.3);
 
-        /*Unset cutting of long text*/
-        max-height: none;
-        overflow: visible;
-    }
+    /*Unset cutting of long text*/
+    max-height: none;
+    overflow: visible;
+  }
 
-    .employment-card:active {
-        background-color: white;
-        filter: saturate(200%);
-        -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
-        -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
-        box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
-        /*Zoom in animation*/
-        transform: scale(1.5);
-    }
+  .employment-card:active {
+    background-color: white;
+    filter: saturate(200%);
+    -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
+    -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
+    box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
+    /*Zoom in animation*/
+    transform: scale(1.5);
+  }
 }
 
 .employment-div {
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .employment-ul {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .project-title {
-    font-style: italic;
-    display: block;
+  font-style: italic;
+  display: block;
 }
 
 .italic-date {
-    font-style: italic;
-    padding-right: 5px
+  font-style: italic;
+  padding-right: 5px
 }
 
 .hard-skills-wrap {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-    max-width: 1000px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  max-width: 1000px !important;
 
 }
 
 .soft-skills-wrap {
-    padding-top: 0px !important;
-    max-width: 1000px !important;
+  padding-top: 0px !important;
+  max-width: 1000px !important;
 }
 
 .no-padding-wrap {
-    padding-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .color-blue {
-    color: $color-blue;
+  color: $color-blue;
 }
 
 .color-purple {
-    color: $color-purple;
+  color: $color-purple;
 }
 
 .color-green {
-    color: $color-green;
+  color: $color-green;
 }
 
 .color-yellow {
-    color: $color-yellow;
+  color: $color-yellow;
 }
 
 .employer {
-    font-style: italic;
-    color: grey;
+  font-style: italic;
+  color: grey;
 }
 
 .employment-dotted-line {
-    border-left: 5px dotted grey;
-    padding-left: 15px
+  border-left: 5px dotted grey;
+  padding-left: 15px
 }
 
 .border-purple {
-    border: 2px solid $color-purple;
+  border: 2px solid $color-purple;
 }
 
 .border-blue {
-    border: 2px solid $color-blue;
+  border: 2px solid $color-blue;
 }
 
 .border-green {
-    border: 2px solid $color-green;
+  border: 2px solid $color-green;
 }
 
 .border-yellow {
-    border: 2px solid $color-yellow;
+  border: 2px solid $color-yellow;
 }
 
 .svg-icons {
-    position: absolute;
-    width: 0;
-    height: 0;
-    overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .img-transform {
-    filter: brightness(90%) saturate(90%);
-    transition: 1.5s;
-}
+  filter: brightness(90%) saturate(90%);
+  transition: 1.5s;
 
-.img-transform:hover {
+  &:hover {
     filter: brightness(110%) saturate(140%);
     transition: 1.5s;
+  }
 }
