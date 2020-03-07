@@ -7,5 +7,4 @@ describe('Content tests', function () {
     it('The title should include dawidkotarba.github.io', function () {
         cy.title().should('include', 'dawidkotarba.github.io')
     });
-
 });

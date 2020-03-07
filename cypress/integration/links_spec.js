@@ -4,10 +4,25 @@ describe('Menu buttons tests', function () {
         cy.visit('index.html')
     });
 
-    it('Homepage menu button should navigate to dawidkotarba.github.io', function () {
+    it('Go down arrow shall scroll down', function () {
+        cy.get('.menu-scroll-down').should('be.visible');
+        cy.get('.menu-scroll-down').click();
+        cy.window().then(($window) => {
+            expect($window.scrollY).to.be.closeTo(270, 100);
+        });
+        cy.get('.menu-scroll-down').should('not.be.visible')
+    });
+
+    it('Main header should refer to localhost', function () {
+        cy.get('#title-link')
+            .should('have.prop', 'href')
+            .and('contains', 'localhost')
+    });
+
+    it('Homepage menu button should navigate to localhost', function () {
         cy.get('#link-homepage')
             .should('have.prop', 'href')
-            .and('contains', 'https://dawidkotarba.github.io')
+            .and('contains', 'localhost')
     });
 
     it('LinkedIn menu button should navigate to LinkedIn profile', function () {
@@ -27,7 +42,6 @@ describe('Menu buttons tests', function () {
             .should('have.prop', 'href')
             .and('equal', 'https://github.com/dawidkotarba/dawidkotarba.github.io')
     });
-
 });
 
 describe('Footer buttons/links tests', function () {
