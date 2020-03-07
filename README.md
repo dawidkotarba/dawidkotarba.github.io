@@ -17,8 +17,13 @@ Images from Unsplash by:
 
 ### Run:
 1. npm install
-2. gulp / gulp build / gulp watch
+2. gulp / gulp build / gulp watch / gulp serve
 
 ### Testing:
 - npm run test
 - npm run cypress
+
+Firefox has to be installed as it is used in headless mode.
+
+### Git hooks:
+Execute install.sh from githooks folder
