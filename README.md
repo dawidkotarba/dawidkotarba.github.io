@@ -17,4 +17,8 @@ Images from Unsplash by:
 
 ### Run:
 1. npm install
-2. gulp
+2. gulp / gulp build / gulp watch
+
+### Testing:
+- npm run test
+- npm run cypress
