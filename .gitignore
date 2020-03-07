@@ -1,4 +1,6 @@
 node_modules
 .idea
 dawidkotarba.github.io.iml
+*.log
 cypress/integration/examples
+cypress/videos
