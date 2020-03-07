@@ -1,3 +1,8 @@
+$color-blue: #006ac7;
+$color-purple: #ba0e56;
+$color-green: #1b8521;
+$color-yellow: #d1a52d;
+
 /*Header image*/
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
     height: 40vh;
@@ -139,19 +144,19 @@
 }
 
 .color-blue {
-    color: #006ac7;
+    color: $color-blue;
 }
 
 .color-purple {
-    color: #ba0e56;
+    color: $color-purple;
 }
 
 .color-green {
-    color: #1b8521;
+    color: $color-green;
 }
 
 .color-yellow {
-    color: #d1a52d;
+    color: $color-yellow;
 }
 
 .employer {
@@ -165,19 +170,19 @@
 }
 
 .border-purple {
-    border: 2px solid #ba0e56;
+    border: 2px solid $color-purple;
 }
 
 .border-blue {
-    border: 2px solid #006ac7;
+    border: 2px solid $color-blue;
 }
 
 .border-green {
-    border: 2px solid #1b8521;
+    border: 2px solid $color-green;
 }
 
 .border-yellow {
-    border: 2px solid #d1a52d;
+    border: 2px solid $color-yellow;
 }
 
 .svg-icons {
