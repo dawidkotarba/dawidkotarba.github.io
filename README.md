@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/dawidkotarba/dawidkotarba.github.io.svg?branch=master)](https://travis-ci.org/dawidkotarba/dawidkotarba.github.io)
 # dawidkotarba.github.io
 
-My resume, under construction forever :)
+My resume, under construction. Forever :)
 
 ### Credits:
 - Evgeny Ignatik: idea of having such a site with twenty seventeen theme
