@@ -12,6 +12,7 @@ before_install:
 script:
 - npm install
 - gulp build --verbose
+- npm run cypress:run
 
 cache:
   directories:
