@@ -4,7 +4,7 @@
   "description": "My resume, under construction forever :)",
   "main": "index.html",
   "scripts": {
-    "test": "cypress run",
+    "test": "cypress run --headless --browser firefox",
     "cypress": "cypress open"
   },
   "repository": {
