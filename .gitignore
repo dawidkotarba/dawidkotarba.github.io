@@ -3,5 +3,6 @@ node_modules
 dawidkotarba.github.io.iml
 *.log
 cypress/integration/examples
+cypress/fixtures/example.json
 cypress/videos
 cypress/screenshots
