@@ -4,15 +4,13 @@ describe('Menu buttons tests', () => {
         cy.visit('index.html')
     });
 
-    // Ignore for now
-    // it('Go down arrow shall scroll down', () => {
-    //     cy.get('.menu-scroll-down').should('be.visible');
-    //     cy.get('.menu-scroll-down').click();
-    //     cy.window().then(($window) => {
-    //         expect($window.scrollY).to.be.closeTo(270, 100);
-    //     });
-    //     cy.get('.menu-scroll-down').should('not.be.visible')
-    // });
+    it('Go down arrow shall scroll down', () => {
+        cy.get('.menu-scroll-down').scrollIntoView().should('be.visible');
+        cy.window().then(($window) => {
+            expect($window.scrollY).to.be.closeTo(270, 100);
+        });
+        cy.get('.menu-scroll-down').should('not.be.visible')
+    });
 
     it('Main header should refer to localhost', () => {
         cy.get('#title-link')
