@@ -209,7 +209,7 @@ $color-yellow: #d1a52d;
   transition: 1.5s;
 
   &:hover {
-    filter: brightness(110%) saturate(140%);
+    filter: brightness(110%) saturate(120%) hue-rotate(-20deg);
     transition: 1.5s;
   }
 }
