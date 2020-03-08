@@ -17,19 +17,19 @@ gulp.task('clean', (done) => {
 });
 
 gulp.task('js', (done) => {
-    gulp.src(['js/jquery.js', 'js/jquery-migrate.min.js', 'js/jquery.scrollTo.js', 'js/global.js', 'js/ga-tags.js', 'js/navigation.js'])
+    gulp.src(['src/js/jquery.js', 'src/js/jquery-migrate.min.js', 'src/js/jquery.scrollTo.js', 'src/js/global.js', 'src/js/ga-tags.js', 'src/js/navigation.js'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 
-    gulp.src('js/html5.js')
+    gulp.src('src/js/html5.js')
         .pipe(concat('html5.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 
-    gulp.src('js/ga.js')
+    gulp.src('src/js/ga.js')
         .pipe(concat('ga.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
@@ -39,14 +39,14 @@ gulp.task('js', (done) => {
 });
 
 gulp.task('css', (done) => {
-    gulp.src(['css/**/*.css', 'css/**/*.scss'])
+    gulp.src(['src/css/**/*.css', 'src/css/**/*.scss'])
         .pipe(concat('bundle.css'))
         .pipe(sass())
         .pipe(minifyCss())
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 
-    gulp.src('css/ie8.css')
+    gulp.src('src/css/ie8.css')
         .pipe(concat('ie8.min.css'))
         .pipe(minifyCss())
         .pipe(gulp.dest('dist/css'))
@@ -69,7 +69,7 @@ gulp.task('html', (done) => {
 });
 
 gulp.task('img', (done) => {
-    gulp.src('img/**/*.+(png|jpg|gif|svg)')
+    gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
         .pipe(cache(imagemin()))
         .pipe(gulp.dest('dist/img'));
 
@@ -77,9 +77,9 @@ gulp.task('img', (done) => {
 });
 
 gulp.task('watch', (done) => {
-    gulp.watch('js/*.js', gulp.series('js'));
-    gulp.watch('css/**/*.+(css|scss)', gulp.series('css'));
-    gulp.watch('img/*.*', gulp.series('img'));
+    gulp.watch('src/js/*.js', gulp.series('js'));
+    gulp.watch('src/css/**/*.+(css|scss)', gulp.series('css'));
+    gulp.watch('src/img/*.*', gulp.series('img'));
     gulp.watch('./**/index_dev.html', gulp.series('html'));
 
     done();
