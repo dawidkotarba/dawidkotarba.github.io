@@ -5,7 +5,7 @@ My resume, under construction. Forever :)
 
 ### Credits:
 - Evgeny Ignatik: idea of having such a site with twenty seventeen theme
-- Theme: twenty seventeen from Wordpress
+- Theme: twenty seventeen from WordPress (https://pl.wordpress.org/themes/twentyseventeen/)
 
 Images from Unsplash by:
 - Victor Malyushev
