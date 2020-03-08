@@ -9,13 +9,14 @@ var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
+var util = require("gulp-util")
 
-gulp.task('clean', function (done) {
+gulp.task('clean', (done) => {
     del.sync('dist');
     done();
 });
 
-gulp.task('js', function (done) {
+gulp.task('js', (done) => {
     gulp.src(['js/jquery.js', 'js/jquery-migrate.min.js', 'js/jquery.scrollTo.js', 'js/global.js', 'js/ga-tags.js', 'js/navigation.js'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())
@@ -37,7 +38,7 @@ gulp.task('js', function (done) {
     done();
 });
 
-gulp.task('css', function (done) {
+gulp.task('css', (done) => {
     gulp.src(['css/**/*.css', 'css/**/*.scss'])
         .pipe(concat('bundle.css'))
         .pipe(sass())
@@ -54,7 +55,7 @@ gulp.task('css', function (done) {
     done();
 });
 
-gulp.task('html', function (done) {
+gulp.task('html', (done) => {
     gulp.src(['index_dev.html'])
 
         .pipe(minifyHtml({
@@ -67,7 +68,7 @@ gulp.task('html', function (done) {
     done();
 });
 
-gulp.task('img', function (done) {
+gulp.task('img', (done) => {
     gulp.src('img/**/*.+(png|jpg|gif|svg)')
         .pipe(cache(imagemin()))
         .pipe(gulp.dest('dist/img'));
@@ -75,7 +76,7 @@ gulp.task('img', function (done) {
     done();
 });
 
-gulp.task('watch', function (done) {
+gulp.task('watch', (done) => {
     gulp.watch('js/*.js', gulp.series('js'));
     gulp.watch('css/**/*.+(css|scss)', gulp.series('css'));
     gulp.watch('img/*.*', gulp.series('img'));
@@ -84,14 +85,14 @@ gulp.task('watch', function (done) {
     done();
 });
 
-gulp.task('browser-sync', function (done) {
+gulp.task('browser-sync', (done) => {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
 
-    gulp.watch(['./**/index.html'], gulp.series(function reload(done) {
+    gulp.watch(['./**/index.html'], gulp.series((done) => {
         browserSync.reload();
         done();
     }));
@@ -99,7 +100,13 @@ gulp.task('browser-sync', function (done) {
     done();
 });
 
+gulp.task('build', gulp.parallel('clean', 'js', 'css', 'img', 'html'));
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
-gulp.task('build', gulp.series('clean', 'js', 'css', 'img', 'html'));
 
-gulp.task('default', gulp.series('serve'));
+gulp.task('default', gulp.series('build', (done) => {
+    util.log("Waiting 2 secs to run browser...");
+    setTimeout(() => {
+        (gulp.series('serve')());
+        done();
+    }, 2000)
+}));
