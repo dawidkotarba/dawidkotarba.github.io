@@ -1,10 +1,10 @@
-describe('Content tests', function () {
+describe('Content tests', () => {
 
-    beforeEach(function () {
+    beforeEach(() => {
         cy.visit('index.html')
     });
 
-    it('The title should include dawidkotarba.github.io', function () {
+    it('The title should include dawidkotarba.github.io', () => {
         cy.title().should('include', 'dawidkotarba.github.io')
     });
 });
