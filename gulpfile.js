@@ -56,6 +56,21 @@ gulp.task('css', (done) => {
     done();
 });
 
+gulp.task('img', (done) => {
+    gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
+        .pipe(cache(imagemin()))
+        .pipe(gulp.dest('dist/img'));
+
+    done();
+});
+
+gulp.task('favicon', (done) => {
+    gulp.src('src/favicon/*.*')
+        .pipe(gulp.dest('dist/favicon'));
+
+    done();
+});
+
 gulp.task('html', (done) => {
     gulp.src(['index_dev.html'])
 
@@ -69,18 +84,11 @@ gulp.task('html', (done) => {
     done();
 });
 
-gulp.task('img', (done) => {
-    gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
-        .pipe(cache(imagemin()))
-        .pipe(gulp.dest('dist/img'));
-
-    done();
-});
-
 gulp.task('watch', (done) => {
     gulp.watch('src/js/*.js', gulp.series('js'));
     gulp.watch('src/css/**/*.+(css|scss)', gulp.series('css'));
     gulp.watch('src/img/*.*', gulp.series('img'));
+    gulp.watch('src/favicon/*.*', gulp.series('favicon'));
     gulp.watch('./**/index_dev.html', gulp.series('html'));
 
     done();
@@ -101,7 +109,7 @@ gulp.task('browser-sync', (done) => {
     done();
 });
 
-gulp.task('build', gulp.parallel('clean', 'js', 'css', 'img', 'html'));
+gulp.task('build', gulp.parallel('clean', 'js', 'css', 'img', 'favicon', 'html'));
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
 
 gulp.task('default', gulp.series('build', (done) => {
