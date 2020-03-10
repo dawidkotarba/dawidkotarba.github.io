@@ -4,8 +4,8 @@ describe('Content tests', () => {
         cy.visit('index.html')
     });
 
-    it('The title should include dawidkotarba.github.io', () => {
-        cy.title().should('include', 'dawidkotarba.github.io')
+    it('The title should include information bout the site', () => {
+        cy.title().should('include', 'Dawid Kotarba - CV')
     });
 
     it('Should display bulb image', () => {
