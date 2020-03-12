@@ -1,7 +1,12 @@
+# general
 node_modules
+*.log
+
+# idea
 .idea
 dawidkotarba.github.io.iml
-*.log
+
+# cypress
 cypress/integration/examples
 cypress/fixtures/example.json
 cypress/videos
