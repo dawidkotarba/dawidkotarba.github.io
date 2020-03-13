@@ -210,11 +210,11 @@ $color-yellow: #d1a52d;
 }
 
 .img-transform {
-  filter: brightness(90%) saturate(90%);
+  filter: brightness(90%) saturate(90%) hue-rotate(15deg);
   transition: 1.5s;
 
   &:hover {
-    filter: brightness(120%) saturate(130%) hue-rotate(-20deg);
+    filter: brightness(120%) saturate(130%) hue-rotate(-15deg);
     transition: 1.5s;
   }
 }
