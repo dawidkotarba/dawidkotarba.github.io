@@ -211,10 +211,10 @@ $color-yellow: #d1a52d;
 
 .img-transform {
   filter: brightness(90%) saturate(90%) hue-rotate(15deg);
-  transition: 1.5s;
+  transition: 3s;
 
   &:hover {
-    filter: brightness(120%) saturate(130%) hue-rotate(-15deg);
+    filter: brightness(110%) saturate(180%) hue-rotate(-15deg);
     transition: 1.5s;
   }
 }

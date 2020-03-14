@@ -15,13 +15,7 @@ My resume, under construction. Forever :)
 - Useful discussion about CSS animated donuts:
     - https://stackoverflow.com/questions/20525820/css3-simple-donut-chart/28345637
 
-Images from Unsplash by:
-- Victor Malyushev
-- Shahadat Rahman
-- Greg Rakozy
-- Martin Wilner
-- Aryan Dhiman
-- Esteban Lopez
+Images from Unsplash, authors are credited in the image name.
 
 ### Run:
 ```bash
