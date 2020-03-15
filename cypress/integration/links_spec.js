@@ -84,4 +84,8 @@ describe('Footer buttons/links tests', () => {
             .should('have.prop', 'href')
             .and('equal', 'https://github.com/dawidkotarba/dawidkotarba.github.io')
     });
+
+    it('Cookie popup shall be visible', () => {
+        cy.get('body > div.cookieconsent').should('be.visible');
+    });
 });
