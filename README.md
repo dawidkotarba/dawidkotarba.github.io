@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/dawidkotarba/dawidkotarba.github.io.svg?branch=master)](https://travis-ci.org/dawidkotarba/dawidkotarba.github.io)
-# https://dawidkotarba.github.io/
+[![codebeat badge](https://codebeat.co/badges/c2a135f1-c13b-48a8-87ca-4611cbee1ca4)](https://codebeat.co/projects/github-com-dawidkotarba-dawidkotarba-github-io-master)
+# https://dawidkotarba.github.io
 
 My resume, under construction. Forever :)
 
