@@ -1,48 +1,65 @@
 describe('Mobile tests', () => {
 
+    const menuSelector = '.menu-toggle';
+    const aboutMeSelector = '#link-about';
+    const blogSelector = '#link-blog';
+    const linkedInSelector = '#link-linkedin';
+    const gitHubSelector = '#link-github';
+
     beforeEach(() => {
         cy.viewport('iphone-6');
         cy.visit('index.html')
     });
 
     it('Menu should toggle on and off', () => {
-        cy.get('#link-homepage').should('not.be.visible');
-        cy.get('#link-linkedin').should('not.be.visible');
-        cy.get('#link-github').should('not.be.visible');
+        cy.get(aboutMeSelector).should('not.be.visible');
+        cy.get(blogSelector).should('not.be.visible');
+        cy.get(linkedInSelector).should('not.be.visible');
+        cy.get(gitHubSelector).should('not.be.visible');
 
-        cy.get('.menu-toggle').click();
+        cy.get(menuSelector).click();
 
-        cy.get('#link-homepage').should('be.visible');
-        cy.get('#link-linkedin').should('be.visible');
-        cy.get('#link-github').should('be.visible');
+        cy.get(aboutMeSelector).should('be.visible');
+        cy.get(blogSelector).should('be.visible');
+        cy.get(linkedInSelector).should('be.visible');
+        cy.get(gitHubSelector).should('be.visible');
 
-        cy.get('.menu-toggle').click();
+        cy.get(menuSelector).click();
 
-        cy.get('#link-homepage').should('not.be.visible');
-        cy.get('#link-linkedin').should('not.be.visible');
-        cy.get('#link-github').should('not.be.visible');
+        cy.get(aboutMeSelector).should('not.be.visible');
+        cy.get(blogSelector).should('not.be.visible');
+        cy.get(linkedInSelector).should('not.be.visible');
+        cy.get(gitHubSelector).should('not.be.visible');
     });
 
-    it('Homepage menu button should navigate to localhost', () => {
-        cy.get('.menu-toggle').click();
-        cy.get('#link-homepage').should('be.visible');
-        cy.get('#link-homepage')
+    it('About me menu button should navigate to localhost', () => {
+        cy.get(menuSelector).click();
+        cy.get(aboutMeSelector).should('be.visible');
+        cy.get(aboutMeSelector)
             .should('have.prop', 'href')
             .and('contains', 'localhost')
     });
 
+    it('Blog menu button should navigate to localhost', () => {
+        cy.get(menuSelector).click();
+        cy.get(blogSelector).should('be.visible');
+        cy.get(blogSelector)
+            .should('have.prop', 'href')
+            .and('contains', 'dawidkotarba.github.io/blog')
+    });
+
     it('LinkedIn menu button should navigate to LinkedIn profile', () => {
-        cy.get('.menu-toggle').click();
-        cy.get('#link-linkedin').should('be.visible');
-        cy.get('#link-linkedin')
+        cy.get(menuSelector).click();
+        cy.get(linkedInSelector).should('be.visible');
+        cy.get(linkedInSelector)
             .should('have.prop', 'href')
             .and('equal', 'https://www.linkedin.com/in/dawid-kotarba-425306a5')
     });
 
     it('GitHub menu button should navigate to GitHub page', () => {
-        cy.get('.menu-toggle').click();
-        cy.get('#link-github').should('be.visible');
-        cy.get('#link-github')
+        cy.get(menuSelector).click();
+        cy.get(gitHubSelector).should('be.visible');
+        cy.get(gitHubSelector)
             .should('have.prop', 'href')
             .and('equal', 'https://github.com/dawidkotarba')
     });

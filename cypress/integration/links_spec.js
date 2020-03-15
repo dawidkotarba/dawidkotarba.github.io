@@ -18,8 +18,8 @@ describe('Menu buttons tests', () => {
             .and('contains', 'localhost')
     });
 
-    it('Homepage menu button should navigate to localhost', () => {
-        cy.get('#link-homepage')
+    it('About me menu button should navigate to localhost', () => {
+        cy.get('#link-about')
             .should('have.prop', 'href')
             .and('contains', 'localhost')
     });
