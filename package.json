@@ -4,8 +4,13 @@
   "description": "My resume, under construction forever :)",
   "main": "index.html",
   "scripts": {
-    "test": "cypress run --headless --browser firefox",
-    "cypress": "cypress open"
+    "test-firefox": "cypress run --headless --browser firefox --env host=index.html",
+    "test-chrome": "cypress run --headless --browser chrome --env host=index.html",
+    "test": "npm run test-firefox && npm run test-chrome",
+    "test-firefox-prod": "cypress run --headless --browser firefox --env host=https://dawidkotarba.github.io",
+    "test-chrome-prod": "cypress run --headless --browser chrome --env host=https://dawidkotarba.github.io",
+    "test-prod": "npm run test-firefox-prod && npm run test-chrome-prod",
+    "cypress": "cypress open --env host=index.html"
   },
   "repository": {
     "type": "git",
@@ -19,7 +24,7 @@
   "homepage": "https://github.com/dawidkotarba/dawidkotarba.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "cypress": "^4.1.0",
+    "cypress": "^4.2.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-cache": "^1.1.3",

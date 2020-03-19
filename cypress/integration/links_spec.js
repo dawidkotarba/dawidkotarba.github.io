@@ -1,7 +1,7 @@
 describe('Menu buttons tests', () => {
 
     beforeEach(() => {
-        cy.visit('index.html')
+        cy.visit(Cypress.env('host'))
     });
 
     it('Go down arrow shall scroll down', () => {
@@ -52,7 +52,7 @@ describe('Menu buttons tests', () => {
 describe('Footer buttons/links tests', () => {
 
     beforeEach(() => {
-        cy.visit('index.html')
+        cy.visit(Cypress.env('host'))
     });
 
     it('Skype button should navigate to Skype profile', () => {

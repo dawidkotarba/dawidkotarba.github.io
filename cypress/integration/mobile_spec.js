@@ -8,7 +8,7 @@ describe('Mobile tests', () => {
 
     beforeEach(() => {
         cy.viewport('iphone-6');
-        cy.visit('index.html')
+        cy.visit(Cypress.env('host'))
     });
 
     it('Menu should toggle on and off', () => {
