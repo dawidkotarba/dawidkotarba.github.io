@@ -10,6 +10,7 @@ My resume, under construction. Forever :)
 - Few awesome libraries used:
     - AOS: https://github.com/michalsnik/aos
     - Animate CSS: https://github.com/daneden/animate.css
+    - lozad.js: https://github.com/ApoorvSaxena/lozad.js
 - ...and apps:
     - Favicon generator: https://www.favicon-generator.org/
     - Shadow box generator: https://www.cssmatic.com/box-shadow

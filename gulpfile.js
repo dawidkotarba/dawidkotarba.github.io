@@ -17,11 +17,11 @@ gulp.task('clean', (done) => {
 });
 
 // cookie-popup.js has to go first, before navigation
-// custom.js has to go before aos
+// custom.js has to go last
 gulp.task('js', (done) => {
     gulp.src(['src/js/jquery.js', 'src/js/jquery-migrate.min.js', 'src/js/cookie-popup.js',
         'src/js/jquery.scrollTo.js', 'src/js/global.js', 'src/js/ga-tags.js',
-        'src/js/navigation.js', 'src/js/aos.js', 'src/js/custom.js'])
+        'src/js/navigation.js', 'src/js/aos.js', 'src/js/lozad.min.js', 'src/js/custom.js'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
