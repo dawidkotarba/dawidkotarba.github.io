@@ -209,16 +209,6 @@ $color-yellow: #d1a52d;
   overflow: hidden;
 }
 
-.img-transform {
-  filter: brightness(90%) saturate(90%) hue-rotate(15deg);
-  transition: 3s;
-
-  &:hover {
-    filter: brightness(110%) saturate(180%) hue-rotate(-15deg);
-    transition: 1.5s;
-  }
-}
-
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
