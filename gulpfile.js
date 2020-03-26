@@ -44,7 +44,8 @@ gulp.task('js', (done) => {
 
 gulp.task('css', (done) => {
     gulp.src(['src/css/**/*.css', 'src/css/**/*.scss',
-        'node_modules/aos/dist/aos.css'])
+        'node_modules/aos/dist/aos.css',
+        'node_modules/animate.css/animate.min.css'])
         .pipe(concat('bundle.css'))
         .pipe(sass())
         .pipe(minifyCss())
