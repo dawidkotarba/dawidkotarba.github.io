@@ -3,12 +3,12 @@ $color-purple: #ba0e56;
 $color-green: #1b8521;
 $color-yellow: #d1a52d;
 
-/*Header image*/
+// Header image
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
   height: 40vh;
 }
 
-/*Content images*/
+// Content images
 .panel-image {
   height: 30vh;
 }
@@ -17,7 +17,7 @@ $color-yellow: #d1a52d;
   max-width: 80%;
 }
 
-/*Header and content images for desktop*/
+// Header and content images for desktop
 @media screen and (min-width: 79em) {
   .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
     height: 80vh;
@@ -50,48 +50,39 @@ $color-yellow: #d1a52d;
     margin-bottom: 30px;
     width: 100%;
 
-    /*rounded corners*/
+    // rounded corners
     border-radius: 24px 24px 24px 24px;
     -moz-border-radius: 24px 24px 24px 24px;
     -webkit-border-radius: 24px 24px 24px 24px;
 
-    /*needed for transition animation*/
-    transition: .5s;
+    // needed for transition animation
+    transition: .7s;
 
-    /*Cutting long text*/
+    // Cutting long text
     max-height: 245px;
     overflow: hidden;
 
     &:hover {
       background-color: white;
-      filter: saturate(130%);
-      -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-      -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-      box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+      -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.50);
+      -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.50);
+      box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.50);
 
-      /*Zoom in animation*/
+      // Zoom in animation
       transform: scale(1.1);
 
       cursor: pointer;
     }
 
-    &:active {
-      background-color: white;
-      -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
-      -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
-      box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.70);
-      /*Zoom in animation*/
-      transform: scale(1.2);
-
-      /*Unset cutting of long text*/
-      max-height: none;
-      overflow: visible;
-    }
-
     &-clicked {
-      /*Unset cutting of long text*/
+      // Unset cutting of long text
       max-height: none;
       overflow: visible;
+
+      // shadow
+      -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+      -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+      box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     }
   }
 }
