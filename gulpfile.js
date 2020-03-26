@@ -21,7 +21,8 @@ gulp.task('clean', (done) => {
 gulp.task('js', (done) => {
     gulp.src(['src/js/jquery.js', 'src/js/jquery.scrollTo.js',
         'src/js/cookie-popup.js', 'src/js/global.js', 'src/js/ga-tags.js',
-        'src/js/navigation.js', 'node_modules/aos/dist/aos.js', 'src/js/lozad.min.js', 'src/js/custom.js'])
+        'src/js/navigation.js', 'node_modules/aos/dist/aos.js',
+        'node_modules/lozad/dist/lozad.min.js', 'src/js/custom.js'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
