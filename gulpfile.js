@@ -19,7 +19,7 @@ gulp.task('clean', (done) => {
 // cookie-popup.js has to go first, before navigation
 // custom.js has to go last
 gulp.task('js', (done) => {
-    gulp.src(['src/js/jquery.js', 'src/js/jquery.scrollTo.js',
+    gulp.src(['node_modules/jquery/dist/jquery.min.js', 'src/js/jquery.scrollTo.js',
         'src/js/cookie-popup.js', 'src/js/global.js', 'src/js/ga-tags.js',
         'src/js/navigation.js', 'node_modules/aos/dist/aos.js',
         'node_modules/lozad/dist/lozad.min.js', 'src/js/custom.js'])
