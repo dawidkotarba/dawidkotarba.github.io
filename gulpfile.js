@@ -21,7 +21,7 @@ gulp.task('clean', (done) => {
 gulp.task('js', (done) => {
     gulp.src(['src/js/jquery.js', 'src/js/jquery.scrollTo.js',
         'src/js/cookie-popup.js', 'src/js/global.js', 'src/js/ga-tags.js',
-        'src/js/navigation.js', 'src/js/aos.js', 'src/js/lozad.min.js', 'src/js/custom.js'])
+        'src/js/navigation.js', 'node_modules/aos/dist/aos.js', 'src/js/lozad.min.js', 'src/js/custom.js'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
@@ -43,7 +43,8 @@ gulp.task('js', (done) => {
 });
 
 gulp.task('css', (done) => {
-    gulp.src(['src/css/**/*.css', 'src/css/**/*.scss'])
+    gulp.src(['src/css/**/*.css', 'src/css/**/*.scss',
+        'node_modules/aos/dist/aos.css'])
         .pipe(concat('bundle.css'))
         .pipe(sass())
         .pipe(minifyCss())
