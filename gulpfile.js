@@ -33,6 +33,12 @@ gulp.task('js', (done) => {
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 
+    gulp.src('src/js/ie-check.js')
+        .pipe(concat('ie-check.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.stream());
+
     gulp.src('src/js/html5.js')
         .pipe(concat('html5.min.js'))
         .pipe(uglify())
