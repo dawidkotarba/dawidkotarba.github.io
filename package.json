@@ -24,7 +24,7 @@
   "homepage": "https://github.com/dawidkotarba/dawidkotarba.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "cypress": "^4.2.0",
+    "cypress": "^4.3.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-cache": "^1.1.3",
