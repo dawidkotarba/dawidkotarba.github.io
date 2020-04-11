@@ -74,6 +74,10 @@ $color-yellow: #d1a52d;
       cursor: pointer;
     }
 
+    &:active {
+      transform: scale(1.05);
+    }
+
     &-clicked {
       // Unset cutting of long text
       max-height: none;
