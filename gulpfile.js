@@ -1,15 +1,15 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
-var rename = require('gulp-rename');
-var minifyHtml = require('gulp-htmlmin');
-var browserSync = require('browser-sync').create();
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
-var del = require('del');
-var util = require("gulp-util")
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const minifyCss = require('gulp-minify-css');
+const rename = require('gulp-rename');
+const minifyHtml = require('gulp-htmlmin');
+const browserSync = require('browser-sync').create();
+const imagemin = require('gulp-imagemin');
+const cache = require('gulp-cache');
+const del = require('del');
+const util = require("gulp-util");
 
 gulp.task('clean', (done) => {
     del.sync('dist');
