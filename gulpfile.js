@@ -7,6 +7,7 @@ const rename = require('gulp-rename');
 const minifyHtml = require('gulp-htmlmin');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
+const imageminGuetzli = require('imagemin-guetzli');
 const cache = require('gulp-cache');
 const del = require('del');
 const util = require("gulp-util");
@@ -64,7 +65,9 @@ gulp.task('css', (done) => {
 
 gulp.task('img', (done) => {
     gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
-        .pipe(cache(imagemin()))
+        .pipe(cache(imagemin([imageminGuetzli({
+            quality: 85
+        })])))
         .pipe(gulp.dest('dist/img'));
 
     done();
