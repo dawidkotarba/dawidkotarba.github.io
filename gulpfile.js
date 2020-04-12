@@ -39,12 +39,6 @@ gulp.task('js', (done) => {
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 
-    gulp.src('src/js/html5.js')
-        .pipe(concat('html5.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
-        .pipe(browserSync.stream());
-
     gulp.src('src/js/ga.js')
         .pipe(concat('ga.min.js'))
         .pipe(uglify())
@@ -61,12 +55,6 @@ gulp.task('css', (done) => {
         'node_modules/animate.css/animate.min.css'])
         .pipe(concat('bundle.css'))
         .pipe(sass())
-        .pipe(minifyCss())
-        .pipe(gulp.dest('dist/css'))
-        .pipe(browserSync.stream());
-
-    gulp.src('src/css/ie8.css')
-        .pipe(concat('ie8.min.css'))
         .pipe(minifyCss())
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
