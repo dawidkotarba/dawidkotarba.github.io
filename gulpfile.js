@@ -17,6 +17,11 @@ gulp.task('clean', (done) => {
     done();
 });
 
+gulp.task('clear-cache', (done) => {
+    cache.clearAll();
+    done();
+});
+
 // cookie-popup.js has to go first, before navigation
 // custom.js has to go last
 gulp.task('js', (done) => {
@@ -120,7 +125,6 @@ gulp.task('browser-sync', (done) => {
 
 gulp.task('build', gulp.parallel('clean', 'js', 'css', 'img', 'favicon', 'html'));
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
-
 gulp.task('default', gulp.series('build', (done) => {
     util.log("Waiting 2 secs to run browser...");
     setTimeout(() => {
