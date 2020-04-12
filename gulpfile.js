@@ -73,6 +73,9 @@ gulp.task('img', (done) => {
         .pipe(cache(imagemin([imageminGuetzli({
             quality: 85
         })])))
+        .pipe(cache(imagemin({
+            progressive: true
+        })))
         .pipe(gulp.dest('dist/img'));
 
     done();
