@@ -6,14 +6,15 @@ My resume, under construction. Forever :)
 
 ### Credits:
 - Evgeny Ignatik: idea of having such a site with twenty seventeen theme
-- Theme: twenty seventeen from WordPress (https://pl.wordpress.org/themes/twentyseventeen/)
+- Theme: twenty seventeen from WordPress (https://pl.wordpress.org/themes/twentyseventeen)
 - Few awesome libraries used:
     - AOS: https://github.com/michalsnik/aos
     - Animate CSS: https://github.com/daneden/animate.css
     - lozad.js: https://github.com/ApoorvSaxena/lozad.js
 - ...and apps:
-    - Favicon generator: https://www.favicon-generator.org/
+    - Favicon generator: https://www.favicon-generator.org
     - Shadow box generator: https://www.cssmatic.com/box-shadow
+    - Gradient generator: https://cssgradient.io
 - Useful discussion about CSS animated donuts:
     - https://stackoverflow.com/questions/20525820/css3-simple-donut-chart/28345637
 
