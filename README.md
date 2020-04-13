@@ -11,6 +11,7 @@ My resume, under construction. Forever :)
     - AOS: https://github.com/michalsnik/aos
     - Animate CSS: https://github.com/daneden/animate.css
     - lozad.js: https://github.com/ApoorvSaxena/lozad.js
+    - Pace: https://github.hubspot.com/pace/docs/welcome
 - ...and apps:
     - Favicon generator: https://www.favicon-generator.org
     - Shadow box generator: https://www.cssmatic.com/box-shadow
