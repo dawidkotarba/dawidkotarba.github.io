@@ -20,3 +20,9 @@ observer.observe();
 $(lozadClass).each(function () {
     observer.triggerLoad(this);
 });
+
+// reading progress bar
+$("body").prognroll({
+    height: 3,
+    color: "#000000"
+});

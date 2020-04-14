@@ -34,6 +34,7 @@ gulp.task('js', (done) => {
         'src/js/ga-tags.js',
         'src/js/navigation.js',
         'src/js/pace.min.js',
+        'src/js/prognroll.min.js',
         'src/js/custom.js'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())

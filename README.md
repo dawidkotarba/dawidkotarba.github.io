@@ -12,6 +12,7 @@ My resume, under construction. Forever :)
     - Animate CSS: https://github.com/daneden/animate.css
     - lozad.js: https://github.com/ApoorvSaxena/lozad.js
     - Pace: https://github.hubspot.com/pace/docs/welcome
+    - JQuery Scroll Progress: https://www.jqueryscript.net/other/jQuery-Scroll-Progress-Indicator-For-Any-Containers-ProngnRoll.html
 - ...and apps:
     - Favicon generator: https://www.favicon-generator.org
     - Shadow box generator: https://www.cssmatic.com/box-shadow
