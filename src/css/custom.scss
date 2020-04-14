@@ -113,6 +113,12 @@ $color-yellow: #d1a52d;
   padding-right: 5px
 }
 
+@media screen and (max-width: 48em) {
+  .invisible-mobile {
+    display: none;
+  }
+}
+
 .hard-skills {
   &-wrap {
     padding-top: 0px !important;
