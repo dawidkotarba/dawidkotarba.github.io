@@ -13,6 +13,7 @@ My resume, under construction. Forever :)
     - lozad.js: https://github.com/ApoorvSaxena/lozad.js
     - Pace: https://github.hubspot.com/pace/docs/welcome
     - JQuery Scroll Progress: https://www.jqueryscript.net/other/jQuery-Scroll-Progress-Indicator-For-Any-Containers-ProngnRoll.html
+    - easy-pie-chart: https://github.com/rendro/easy-pie-chart
 - ...and apps:
     - Favicon generator: https://www.favicon-generator.org
     - Shadow box generator: https://www.cssmatic.com/box-shadow

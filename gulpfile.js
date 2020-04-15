@@ -33,6 +33,7 @@ gulp.task('js', (done) => {
         'src/js/global.js',
         'src/js/ga-tags.js',
         'src/js/navigation.js',
+        'src/js/jquery.easypiechart.min.js',
         'src/js/pace.min.js',
         'src/js/prognroll.min.js',
         'src/js/custom.js'])

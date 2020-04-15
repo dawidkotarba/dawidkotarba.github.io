@@ -1,0 +1,32 @@
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  transition: .5s;
+  margin: 50px 20px;
+  font-size: small;
+
+  &:hover {
+    transform: scale(1.2);
+    filter: saturate(250%);
+  }
+
+  &:active {
+    transform: scale(1.1);
+    filter: saturate(180%);
+  }
+
+  &-text {
+    display: inline-block;
+    line-height: 110px;
+    z-index: 2;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

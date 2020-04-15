@@ -26,3 +26,13 @@ $("body").prognroll({
     height: 3,
     color: "#000000"
 });
+
+// pie charts
+$(function() {
+    $('.chart').easyPieChart({
+        scaleColor: false,
+        lineCap: "round",
+        lineWidth: 8,
+        size: 120
+    });
+});
