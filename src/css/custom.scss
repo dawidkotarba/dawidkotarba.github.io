@@ -91,6 +91,8 @@ $color-yellow: #d1a52d;
     }
 
     &-clicked {
+      border-bottom-style: solid !important;
+
       // Unset cutting of long text
       max-height: none;
       overflow: visible;
@@ -100,6 +102,54 @@ $color-yellow: #d1a52d;
       -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
       box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
     }
+  }
+}
+
+.color-blue {
+  color: $color-blue !important;
+}
+
+.color-purple {
+  color: $color-purple !important;
+}
+
+.color-green {
+  color: $color-green !important;
+}
+
+.color-yellow {
+  color: $color-yellow !important;
+}
+
+.employer {
+  font-style: italic;
+  color: grey;
+}
+
+.employment-dotted-line {
+  border-left: 5px dotted grey;
+  padding-left: 15px
+}
+
+.border {
+  &-blue {
+    border: 2px solid $color-blue;
+  }
+
+  &-purple {
+    border: 2px solid $color-purple;
+  }
+
+  &-green {
+    border: 2px solid $color-green;
+  }
+
+  &-yellow {
+    border: 2px solid $color-yellow;
+  }
+
+  &-with-details {
+    border-bottom-style: dotted;
   }
 }
 
@@ -148,48 +198,6 @@ $color-yellow: #d1a52d;
 
 .padding-left-30px {
   padding-left: 30px
-}
-
-.color-blue {
-  color: $color-blue !important;
-}
-
-.color-purple {
-  color: $color-purple !important;
-}
-
-.color-green {
-  color: $color-green !important;
-}
-
-.color-yellow {
-  color: $color-yellow !important;
-}
-
-.employer {
-  font-style: italic;
-  color: grey;
-}
-
-.employment-dotted-line {
-  border-left: 5px dotted grey;
-  padding-left: 15px
-}
-
-.border-purple {
-  border: 2px solid $color-purple;
-}
-
-.border-blue {
-  border: 2px solid $color-blue;
-}
-
-.border-green {
-  border: 2px solid $color-green;
-}
-
-.border-yellow {
-  border: 2px solid $color-yellow;
 }
 
 .svg-icons {
