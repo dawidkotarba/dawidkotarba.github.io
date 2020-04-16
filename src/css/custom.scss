@@ -91,10 +91,18 @@ $color-yellow: #d1a52d;
       transform: scale(1.1);
 
       cursor: pointer;
+
+      & > legend {
+        text-shadow: 1px 1px 1px lightgrey;
+      }
     }
 
     &:active {
       transform: scale(1.05);
+
+      & > legend {
+        text-shadow: 1px 1px 1px lightgrey;
+      }
     }
 
     &-clicked {
@@ -108,6 +116,10 @@ $color-yellow: #d1a52d;
       -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.20);
       -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.20);
       box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.20);
+
+      & > legend {
+        text-shadow: 1px 1px 1px lightgrey;
+      }
     }
   }
 }
