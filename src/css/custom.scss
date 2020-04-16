@@ -48,7 +48,12 @@ $color-yellow: #d1a52d;
 }
 
 .employment {
+  &-legend {
+    margin-left: 20px;
+  }
+
   &-div {
+    padding-top: 5px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -59,7 +64,7 @@ $color-yellow: #d1a52d;
   &-card {
     font-size: small;
     background-color: white;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 100%;
 
     // rounded corners
@@ -71,7 +76,7 @@ $color-yellow: #d1a52d;
     transition: .7s;
 
     // Cutting long text
-    max-height: 245px;
+    max-height: 220px;
     overflow: hidden;
 
     &:hover {
