@@ -2,6 +2,7 @@ $color-blue: #006ac7;
 $color-purple: #ba0e56;
 $color-green: #1b8521;
 $color-yellow: #d1a52d;
+$desktop-size: 1080px;
 
 // Header image
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
@@ -18,7 +19,7 @@ $color-yellow: #d1a52d;
 }
 
 // Header and content images for desktop
-@media screen and (min-width: 79em) {
+@media screen and (min-width: $desktop-size) {
   .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
     height: 80vh;
   }
@@ -81,44 +82,46 @@ $color-yellow: #d1a52d;
     max-height: 220px;
     overflow: hidden;
 
-    &:hover {
-      background-color: white;
-      -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-      -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
-      box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+    @media screen and (min-width: $desktop-size) {
+      &:hover {
+        background-color: white;
+        -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+        -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
+        box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.30);
 
-      // Zoom in animation
-      transform: scale(1.1);
+        // Zoom in animation
+        transform: scale(1.1);
 
-      cursor: pointer;
+        cursor: pointer;
 
-      & > legend {
-        text-shadow: 1px 1px 1px lightgrey;
+        & > legend {
+          text-shadow: 1px 1px 1px lightgrey;
+        }
       }
-    }
 
-    &:active {
-      transform: scale(1.05);
+      &:active {
+        transform: scale(1.05);
 
-      & > legend {
-        text-shadow: 1px 1px 1px lightgrey;
+        & > legend {
+          text-shadow: 1px 1px 1px lightgrey;
+        }
       }
-    }
 
-    &-clicked {
-      border-bottom-style: solid !important;
+      &-clicked {
+        border-bottom-style: solid !important;
 
-      // Unset cutting of long text
-      max-height: none;
-      overflow: visible;
+        // Unset cutting of long text
+        max-height: none;
+        overflow: visible;
 
-      // shadow
-      -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.20);
-      -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.20);
-      box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.20);
+        // shadow
+        -webkit-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.20);
+        -moz-box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.20);
+        box-shadow: 10px 10px 55px 0px rgba(0, 0, 0, 0.20);
 
-      & > legend {
-        text-shadow: 1px 1px 1px lightgrey;
+        & > legend {
+          text-shadow: 1px 1px 1px lightgrey;
+        }
       }
     }
   }
@@ -169,6 +172,10 @@ $color-yellow: #d1a52d;
 
   &-with-details {
     border-bottom-style: dotted;
+
+    @media screen and (max-width: $desktop-size) {
+      border-bottom-style: solid !important;
+    }
   }
 }
 
@@ -182,7 +189,7 @@ $color-yellow: #d1a52d;
   padding-right: 5px
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: $desktop-size) {
   .invisible-mobile {
     display: none;
   }
