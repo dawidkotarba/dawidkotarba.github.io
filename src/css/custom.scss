@@ -241,3 +241,22 @@ $desktop-size: 1080px;
   -ms-user-select: none;
   user-select: none;
 }
+
+.tooltip {
+
+  &-blue {
+    --balloon-color: #006ac7;
+  }
+
+  &-purple {
+    --balloon-color: #ba0e56;
+  }
+
+  &-green {
+    --balloon-color: #1b8521;
+  }
+
+  &-yellow {
+    --balloon-color: #d1a52d;
+  }
+}

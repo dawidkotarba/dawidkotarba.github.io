@@ -14,6 +14,7 @@ My resume, under construction. Forever :)
     - Pace: https://github.hubspot.com/pace/docs/welcome
     - JQuery Scroll Progress: https://www.jqueryscript.net/other/jQuery-Scroll-Progress-Indicator-For-Any-Containers-ProngnRoll.html
     - easy-pie-chart: https://github.com/rendro/easy-pie-chart
+    - ballons.css: https://kazzkiq.github.io/balloon.css/
 - ...and apps:
     - Favicon generator: https://www.favicon-generator.org
     - Shadow box generator: https://www.cssmatic.com/box-shadow
