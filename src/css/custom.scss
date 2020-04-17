@@ -243,20 +243,30 @@ $desktop-size: 1080px;
 }
 
 .tooltip {
+  cursor: default !important;
 
   &-blue {
+    @extend .tooltip;
     --balloon-color: #006ac7;
   }
 
   &-purple {
+    @extend .tooltip;
     --balloon-color: #ba0e56;
   }
 
   &-green {
+    @extend .tooltip;
     --balloon-color: #1b8521;
   }
 
   &-yellow {
+    @extend .tooltip;
     --balloon-color: #d1a52d;
+  }
+
+  &-grey {
+    @extend .tooltip;
+    --balloon-color: #666666;
   }
 }
