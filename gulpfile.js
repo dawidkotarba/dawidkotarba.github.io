@@ -38,6 +38,8 @@ gulp.task('js', (done) => {
         'src/js/jquery.easypiechart.min.js',
         'src/js/pace.min.js',
         'src/js/prognroll.min.js',
+        'src/js/custom-lozad.js',
+        'src/js/custom-piechart.js',
         'src/js/custom.js'])
         .pipe(plumber())
         .pipe(concat('bundle.js'))
