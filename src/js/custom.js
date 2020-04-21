@@ -7,10 +7,10 @@ $('.employment-card').click(function () {
 AOS.init();
 
 // lazy loading
-var lozadClass = '.lozad';
+const lozadClass = '.lozad';
 
 // load images 1000px before it is visible
-var observer = lozad(lozadClass, {
+const observer = lozad(lozadClass, {
     rootMargin: '1000px 0px'
 });
 observer.observe();
@@ -27,15 +27,15 @@ $("body").prognroll({
     color: "#000000"
 });
 
-function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
+isScrolledIntoView = (elem) => {
+    const docViewTop = $(window).scrollTop();
+    const docViewBottom = docViewTop + $(window).height();
 
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
+    const elemTop = $(elem).offset().top;
+    const elemBottom = elemTop + $(elem).height();
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
+};
 
 // pie charts
 $('.chart').easyPieChart({
@@ -46,8 +46,8 @@ $('.chart').easyPieChart({
     animate: {duration: 2000, enabled: true}
 });
 
-function animateChartsWhenVisible(visibleElementSelector, chartSelector) {
-    var done = false;
+animateChartsWhenVisible = (visibleElementSelector, chartSelector) => {
+    let done = false;
 
     if (!done && !isScrolledIntoView(visibleElementSelector)) {
         $(chartSelector).each(function () {
@@ -64,7 +64,7 @@ function animateChartsWhenVisible(visibleElementSelector, chartSelector) {
             });
         }
     });
-}
+};
 
 animateChartsWhenVisible('.hard-skills-description', '.chart-hard-skill');
 animateChartsWhenVisible('.soft-skills-description', '.chart-soft-skill');

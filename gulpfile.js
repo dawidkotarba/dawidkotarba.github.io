@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+const babel = require('gulp-babel');
+const plumber = require('gulp-plumber')
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
@@ -37,7 +39,15 @@ gulp.task('js', (done) => {
         'src/js/pace.min.js',
         'src/js/prognroll.min.js',
         'src/js/custom.js'])
+        .pipe(plumber())
         .pipe(concat('bundle.js'))
+        .pipe(babel({
+            presets: [
+                ['@babel/env', {
+                    modules: false
+                }]
+            ]
+        }))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
