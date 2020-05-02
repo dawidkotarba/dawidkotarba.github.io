@@ -27,7 +27,8 @@ gulp.task('clear-cache', (done) => {
 // cookie-popup.js has to go first, before navigation
 // custom.js has to go last
 gulp.task('js', (done) => {
-    gulp.src(['node_modules/jquery/dist/jquery.min.js',
+    gulp.src(['src/js/pace.min.js',
+        'node_modules/jquery/dist/jquery.min.js',
         'node_modules/jquery.scrollto/jquery.scrollTo.min.js',
         'node_modules/aos/dist/aos.js',
         'node_modules/lozad/dist/lozad.min.js',
@@ -36,7 +37,6 @@ gulp.task('js', (done) => {
         'src/js/ga-tags.js',
         'src/js/navigation.js',
         'src/js/jquery.easypiechart.min.js',
-        'src/js/pace.min.js',
         'src/js/prognroll.min.js',
         'src/js/custom-lozad.js',
         'src/js/custom-piechart.js',
