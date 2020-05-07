@@ -12,7 +12,7 @@ My resume, under construction. Forever :)
     - Animate CSS: https://github.com/daneden/animate.css
     - lozad.js: https://github.com/ApoorvSaxena/lozad.js
     - Pace: https://github.hubspot.com/pace/docs/welcome
-    - JQuery Scroll Progress: https://www.jqueryscript.net/other/jQuery-Scroll-Progress-Indicator-For-Any-Containers-ProngnRoll.html
+    - Back top scroll indicator: https://www.jqueryscript.net/other/back-top-scroll-indicator.html
     - easy-pie-chart: https://github.com/rendro/easy-pie-chart
     - ballons.css: https://kazzkiq.github.io/balloon.css/
 - ...and apps:
