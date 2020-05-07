@@ -76,6 +76,7 @@ $desktop-size: 1080px;
     -webkit-border-radius: 24px 24px 24px 24px;
 
     // needed for transition animation
+    -webkit-transition: .7s;
     transition: .7s;
 
     // Cutting long text

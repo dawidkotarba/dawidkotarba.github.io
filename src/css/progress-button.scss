@@ -12,9 +12,8 @@ $desktop-size: 1080px;
   z-index: 10000;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(15px);
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
+  -webkit-transition: .7s;
+  transition: .7s;
   /*button background*/
   background: #e7e7e7;
 
@@ -23,7 +22,13 @@ $desktop-size: 1080px;
   }
 
   &:hover {
-    background: #cbcbcb;
+    background: #c4c4c4;
+    transform: scale(1.5);
+
+    //shadow
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.30);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.30);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.30);
 
     &::before {
       opacity: 1;
@@ -34,10 +39,18 @@ $desktop-size: 1080px;
     }
   }
 
+  &:active {
+    transform: scale(1.3);
+
+    //shadow
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.20);
+  }
+
   &.active-progress {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
   }
 
   &::before {
@@ -58,9 +71,6 @@ $desktop-size: 1080px;
     cursor: pointer;
     display: block;
     z-index: 2;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
-    transform: scale(1.5);
   }
 
   &::after {
@@ -77,8 +87,6 @@ $desktop-size: 1080px;
     cursor: pointer;
     display: block;
     z-index: 1;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
   }
 
   & svg path {
@@ -89,7 +97,5 @@ $desktop-size: 1080px;
     stroke: black;
     stroke-width: 4;
     box-sizing: border-box;
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
   }
 }
