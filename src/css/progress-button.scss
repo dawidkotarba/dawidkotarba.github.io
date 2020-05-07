@@ -1,3 +1,5 @@
+$desktop-size: 1080px;
+
 .progress-wrap {
   position: fixed;
   right: 50px;
@@ -15,6 +17,10 @@
   transition: all 200ms linear;
   /*button background*/
   background: #e7e7e7;
+
+  @media screen and (max-width: $desktop-size) {
+    display: none;
+  }
 
   &:hover {
     background: #cbcbcb;
