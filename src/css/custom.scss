@@ -44,6 +44,25 @@
   padding-bottom: 20px
 }
 
+.menu-scroll-down {
+  -webkit-transition: .7s !important;
+  transition: .7s !important;
+  color: $color-link !important;
+
+  &:hover {
+    -webkit-transition: .7s;
+    transition: .7s;
+    transform: scale(1.4);
+    color: $color-link-hoover !important;
+  }
+
+  &:active {
+    -webkit-transition: .7s;
+    transition: .7s;
+    transform: scale(1.2);
+  }
+}
+
 .employment {
   &-legend {
     margin-left: 20px;
