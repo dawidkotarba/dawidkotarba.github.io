@@ -60,6 +60,7 @@ $desktop-size: 1080px;
     z-index: 2;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
+    transform: scale(1.5);
   }
 
   &::after {
