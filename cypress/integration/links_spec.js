@@ -4,12 +4,40 @@ describe('Menu buttons tests', () => {
         cy.visit(Cypress.env('host'))
     });
 
-    it('Go down arrow shall scroll down', () => {
+    it('should go down after scroll down arrow is clicked', () => {
         cy.get('.menu-scroll-down').scrollIntoView().should('be.visible');
         cy.window().then(($window) => {
-            expect($window.scrollY).to.be.closeTo(270, 100);
+            expect($window.scrollY).to.be.closeTo(500, 200);
         });
         cy.get('.menu-scroll-down').should('not.be.visible')
+    });
+
+
+    it('should not show scroll up button without scrolling down', () => {
+        cy.get('.progress-wrap').should('not.be.visible');
+        cy.scrollTo(0, 200)
+    });
+
+    it('should show scroll up button after scrolling down', () => {
+        cy.get('.progress-wrap').should('not.be.visible');
+        cy.scrollTo(0, 200);
+        cy.get('.progress-wrap').should('be.visible');
+    });
+
+    it('should show scroll to top after clicking scroll up button', () => {
+        // top of the page - button not visible
+        cy.get('.progress-wrap').should('not.be.visible');
+        // scroll to see button
+        cy.scrollTo(0, 500);
+        // button appears
+        cy.get('.progress-wrap').should('be.visible');
+        cy.get('.progress-wrap').click();
+        // scrolling - need to wait
+        cy.wait(500);
+        cy.window().then(($window) => {
+            expect($window.scrollY).to.be.closeTo(0, 0);
+        });
+        cy.get('.progress-wrap').should('not.be.visible');
     });
 
     it('Main header should refer to localhost', () => {

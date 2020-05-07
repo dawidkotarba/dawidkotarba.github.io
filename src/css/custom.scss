@@ -1,8 +1,4 @@
-$color-blue: #006ac7;
-$color-purple: #ba0e56;
-$color-green: #1b8521;
-$color-yellow: #d1a52d;
-$desktop-size: 1080px;
+@import 'constants.scss';
 
 // Header image
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
