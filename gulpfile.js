@@ -40,6 +40,7 @@ gulp.task('js', (done) => {
         'src/js/custom-lozad.js',
         'src/js/custom-piechart.js',
         'src/js/progress-button.js',
+        'src/js/mobile-check.js',
         'src/js/custom.js'])
         .pipe(plumber())
         .pipe(concat('bundle.js'))
