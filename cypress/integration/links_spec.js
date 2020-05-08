@@ -33,7 +33,7 @@ describe('Menu buttons tests', () => {
         cy.get('.progress-wrap').should('be.visible');
         cy.get('.progress-wrap').click();
         // scrolling - need to wait
-        cy.wait(500);
+        cy.wait(1000);
         cy.window().then(($window) => {
             expect($window.scrollY).to.be.closeTo(0, 0);
         });
