@@ -286,3 +286,25 @@
     --balloon-color: #666666;
   }
 }
+
+/* Cookie button */
+.cookieBtn {
+  background-color: #ffffff;
+  border-radius: 6px;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-size: 16px;
+  padding: 1px 10px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #f2f2f2;
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+    position: relative;
+    top: 1px;
+  }
+}
