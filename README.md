@@ -30,6 +30,16 @@ npm install
 gulp / gulp build / gulp watch / gulp serve
 ```
 
+For a `gulp serve`, you may need to increase the inotify watch limit:
+```bash
+sudo vim /etc/sysctl.conf
+```
+
+Add a line at the bottom:
+`fs.inotify.max_user_watches=524288`
+
+To check if it is applied: `sudo sysctl -p`
+
 ### Testing:
 ```bash
 npm run test
