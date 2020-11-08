@@ -44,6 +44,12 @@
   padding-bottom: 20px
 }
 
+.navigation-top a:hover {
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  color: #006ac7 !important;
+}
+
 .menu-scroll-down {
   -webkit-transition: .7s !important;
   transition: .7s !important;
