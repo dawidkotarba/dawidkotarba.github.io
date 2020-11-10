@@ -142,9 +142,10 @@ gulp.task('browser-sync', (done) => {
     done();
 });
 
+gulp.task('buildWithoutImages', gulp.parallel('clean', 'js', 'css', 'favicon', 'html'));
 gulp.task('build', gulp.parallel('clean', 'js', 'css', 'img', 'favicon', 'html'));
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
-gulp.task('default', gulp.series('build', (done) => {
+gulp.task('default', gulp.series('buildWithoutImages', (done) => {
     util.log("Waiting 2 secs to run browser...");
     setTimeout(() => {
         (gulp.series('serve')());
