@@ -99,8 +99,8 @@
   }
 
   & svg.progress-circle path {
-    stroke: black;
-    stroke-width: 4;
+    stroke: $color-link-hoover;
+    stroke-width: 6;
     box-sizing: border-box;
   }
 }
