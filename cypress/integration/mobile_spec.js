@@ -1,7 +1,6 @@
 describe('Mobile tests', () => {
 
     const menuSelector = '.menu-toggle';
-    const aboutMeSelector = '#link-about';
     const blogSelector = '#link-blog';
     const linkedInSelector = '#link-linkedin';
     const gitHubSelector = '#link-github';
@@ -12,33 +11,23 @@ describe('Mobile tests', () => {
     });
 
     it('Menu should toggle on and off', () => {
-        cy.get(aboutMeSelector).should('not.be.visible');
         cy.get(blogSelector).should('not.be.visible');
         cy.get(linkedInSelector).should('not.be.visible');
         cy.get(gitHubSelector).should('not.be.visible');
 
         cy.get(menuSelector).click();
 
-        cy.get(aboutMeSelector).should('be.visible');
         cy.get(blogSelector).should('be.visible');
         cy.get(linkedInSelector).should('be.visible');
         cy.get(gitHubSelector).should('be.visible');
 
         cy.get(menuSelector).click();
 
-        cy.get(aboutMeSelector).should('not.be.visible');
         cy.get(blogSelector).should('not.be.visible');
         cy.get(linkedInSelector).should('not.be.visible');
         cy.get(gitHubSelector).should('not.be.visible');
     });
 
-    it('About me menu button should navigate to localhost', () => {
-        cy.get(menuSelector).click();
-        cy.get(aboutMeSelector).should('be.visible');
-        cy.get(aboutMeSelector)
-            .should('have.prop', 'href')
-            .and('contains', 'localhost')
-    });
 
     it('Blog menu button should navigate to localhost', () => {
         cy.get(menuSelector).click();
