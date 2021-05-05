@@ -8,8 +8,8 @@
     "test-chrome": "cypress run --headless --browser chrome --env host=index.html",
     "testall": "npm run test-firefox && npm run test-chrome",
     "test": "npm run test-chrome",
-    "test-firefox-prod": "cypress run --headless --browser firefox --env host=https://dawidkotarba.github.io",
-    "test-chrome-prod": "cypress run --headless --browser chrome --env host=https://dawidkotarba.github.io",
+    "test-firefox-prod": "cypress run --headless --browser firefox --env host=https://dawidkotarba.eu",
+    "test-chrome-prod": "cypress run --headless --browser chrome --env host=https://dawidkotarba.eu",
     "test-prod": "npm run test-firefox-prod && npm run test-chrome-prod",
     "cypress": "cypress open --env host=index.html"
   },

@@ -45,7 +45,7 @@ describe('Mobile tests', () => {
         cy.get(blogSelector).should('be.visible');
         cy.get(blogSelector)
             .should('have.prop', 'href')
-            .and('contains', 'dawidkotarba.github.io/blog')
+            .and('contains', 'unknownexception.eu')
     });
 
     it('LinkedIn menu button should navigate to LinkedIn profile', () => {
