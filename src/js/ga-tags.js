@@ -1,4 +1,5 @@
-if (document.location.hostname.search("dawidkotarba.eu") !== -1) {
+if (document.location.hostname.search("dawidkotarba.github.io") !== -1
+    || document.location.hostname.search("dawidkotarba.eu") !== -1) {
     (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
