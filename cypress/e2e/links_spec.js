@@ -70,25 +70,25 @@ describe('Menu buttons tests', () => {
     });
 
     it('should show UBS experience card', () => {
-        cy.get('#employment-ubs').should('be.visible');
+        cy.get('#employment-ubs').scrollIntoView().should('be.visible');
         cy.get('#employment-ubs').should('have.class', 'border-blue');
         cy.get('#employment-ubs .employer').should('contain', 'UBS');
     });
 
     it('should show Dawid Kotarba Software experience card', () => {
-        cy.get('#employment-dks').should('be.visible');
+        cy.get('#employment-dks').scrollIntoView().should('be.visible');
         cy.get('#employment-dks').should('have.class', 'border-green');
         cy.get('#employment-dks .employer').should('contain', 'Dawid Kotarba Software');
     });
 
     it('should show Metrosoft experience card', () => {
-        cy.get('#employment-metrosoft').should('be.visible');
+        cy.get('#employment-metrosoft').scrollIntoView().should('be.visible');
         cy.get('#employment-metrosoft').should('have.class', 'border-yellow');
         cy.get('#employment-metrosoft .employer').should('contain', 'Metrosoft');
     });
 
     it('should show EPAM experience card with indigo border', () => {
-        cy.get('#employment-epam').should('be.visible');
+        cy.get('#employment-epam').scrollIntoView().should('be.visible');
         cy.get('#employment-epam').should('have.class', 'border-indigo');
         cy.get('#employment-epam .employer').should('contain', 'EPAM Systems');
     });

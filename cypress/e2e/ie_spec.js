@@ -81,7 +81,7 @@ describe('Should not show IE not supported popup', () => {
                 });
             },
         });
-        cy.get(popupLocator).should('not.be.visible');
+        cy.get(popupLocator).should('not.exist');
     });
 
     it('For Firefox', () => {
@@ -92,7 +92,7 @@ describe('Should not show IE not supported popup', () => {
                 });
             },
         });
-        cy.get(popupLocator).should('not.be.visible');
+        cy.get(popupLocator).should('not.exist');
     });
 
     it('For Opera', () => {
@@ -103,7 +103,7 @@ describe('Should not show IE not supported popup', () => {
                 });
             },
         });
-        cy.get(popupLocator).should('not.be.visible');
+        cy.get(popupLocator).should('not.exist');
     });
 
     it('For Safari', () => {
@@ -114,7 +114,7 @@ describe('Should not show IE not supported popup', () => {
                 });
             },
         });
-        cy.get(popupLocator).should('not.be.visible');
+        cy.get(popupLocator).should('not.exist');
     });
 });
 

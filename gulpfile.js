@@ -11,11 +11,11 @@ const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const imageminGuetzli = require('imagemin-guetzli');
 const cache = require('gulp-cache');
-const del = require('del');
+const { deleteSync } = require('del');
 const log = require('fancy-log');
 
 gulp.task('clean', (done) => {
-    del.sync('dist');
+    deleteSync('dist');
     done();
 });
 
