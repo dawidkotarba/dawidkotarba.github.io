@@ -165,12 +165,24 @@
   color: $color-yellow !important;
 }
 
-.color-celadon {
-  color: $color-celadon !important;
+.color-indigo {
+  color: $color-indigo !important;
 }
 
 .color-black {
   color: $color-black !important;
+}
+
+.color-red {
+  color: $color-red !important;
+}
+
+.color-orange {
+  color: $color-orange !important;
+}
+
+.color-cyan {
+  color: $color-cyan !important;
 }
 
 .more-details {
@@ -205,12 +217,24 @@
     border: 2px solid $color-yellow;
   }
 
-  &-celadon {
-    border: 2px solid $color-celadon;
+  &-indigo {
+    border: 2px solid $color-indigo;
   }
 
   &-black {
     border: 2px solid $color-black;
+  }
+
+  &-red {
+    border: 2px solid $color-red;
+  }
+
+  &-orange {
+    border: 2px solid $color-orange;
+  }
+
+  &-cyan {
+    border: 2px solid $color-cyan;
   }
 }
 
