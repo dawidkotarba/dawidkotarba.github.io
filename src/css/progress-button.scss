@@ -65,7 +65,7 @@
     position: absolute;
     content: '↑';
     text-align: center;
-    line-height: 46px;
+    line-height: 42px; // Slightly decreased from 46px to move arrow up
     font-size: 24px;
     opacity: 0;
     /*arrow hoover*/
@@ -85,7 +85,7 @@
     position: absolute;
     content: '↑';
     text-align: center;
-    line-height: 46px;
+    line-height: 42px; // Slightly decreased from 46px to move arrow up
     font-size: 24px;
     color: black;
     left: 0;
