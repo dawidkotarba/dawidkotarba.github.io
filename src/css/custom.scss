@@ -49,7 +49,8 @@
   transition: all 0.3s ease;
   display: inline-block;
   text-decoration: none !important;
-  border-bottom: none !important; // Remove persistent theme line
+  border-bottom: none !important;
+  box-shadow: none !important; // Remove persistent theme shadow line
 
   &::after {
     content: '';
@@ -63,7 +64,6 @@
   }
 
   &:hover {
-    box-shadow: none !important;
     &::after {
       width: 100%;
     }
