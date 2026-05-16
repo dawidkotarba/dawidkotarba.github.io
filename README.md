@@ -25,12 +25,24 @@ My resume, under construction. Forever :)
 Images from Unsplash, authors are credited in the image name.
 
 ### Run:
+1. Install dependencies:
 ```bash
 npm install
-gulp / gulp build / gulp watch / gulp serve
 ```
 
-For a `gulp serve`, you may need to increase the inotify watch limit:
+2. Build the project:
+```bash
+npm run build
+```
+
+3. Development (live reload):
+```bash
+npx gulp serve
+```
+
+Other Gulp tasks: `npx gulp watch`, `npx gulp clean`.
+
+For a `npx gulp serve` on Linux, you may need to increase the inotify watch limit:
 ```bash
 sudo vim /etc/sysctl.conf
 ```

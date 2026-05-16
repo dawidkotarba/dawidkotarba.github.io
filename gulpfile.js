@@ -3,8 +3,8 @@ const babel = require('gulp-babel');
 const plumber = require('gulp-plumber')
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const sass = require('gulp-sass');
-const minifyCss = require('gulp-minify-css');
+const sass = require('gulp-sass')(require('sass'));
+const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const minifyHtml = require('gulp-htmlmin');
 const browserSync = require('browser-sync').create();
@@ -12,7 +12,7 @@ const imagemin = require('gulp-imagemin');
 const imageminGuetzli = require('imagemin-guetzli');
 const cache = require('gulp-cache');
 const del = require('del');
-const util = require("gulp-util");
+const log = require('fancy-log');
 
 gulp.task('clean', (done) => {
     del.sync('dist');
@@ -75,9 +75,9 @@ gulp.task('css', (done) => {
         'src/css/**/*.scss',
         'node_modules/aos/dist/aos.css',
         'node_modules/animate.css/animate.min.css'])
+        .pipe(sass().on('error', sass.logError))
         .pipe(concat('bundle.css'))
-        .pipe(sass())
-        .pipe(minifyCss())
+        .pipe(cleanCss())
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 
@@ -146,7 +146,7 @@ gulp.task('buildWithoutImages', gulp.parallel('clean', 'js', 'css', 'favicon', '
 gulp.task('build', gulp.parallel('clean', 'js', 'css', 'img', 'favicon', 'html'));
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
 gulp.task('default', gulp.series('buildWithoutImages', (done) => {
-    util.log("Waiting 2 secs to run browser...");
+    log("Waiting 2 secs to run browser...");
     setTimeout(() => {
         (gulp.series('serve')());
         done();
