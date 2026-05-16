@@ -24,15 +24,14 @@ gulp.task('clear-cache', (done) => {
     done();
 });
 
+// custom.js has to go last
 gulp.task('js-main', () => {
     return gulp.src(['src/js/pace.min.js',
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/jquery.scrollto/jquery.scrollTo.min.js',
         'node_modules/aos/dist/aos.js',
         'node_modules/lozad/dist/lozad.min.js',
-        'src/js/cookie-popup.js',
         'src/js/global.js',
-        'src/js/ga-tags.js',
         'src/js/navigation.js',
         'src/js/jquery.easypiechart.min.js',
         'src/js/custom-lozad.js',
@@ -62,15 +61,7 @@ gulp.task('js-ie', () => {
         .pipe(browserSync.stream());
 });
 
-gulp.task('js-ga', () => {
-    return gulp.src('src/js/ga.js')
-        .pipe(concat('ga.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('js', gulp.parallel('js-main', 'js-ie', 'js-ga'));
+gulp.task('js', gulp.parallel('js-main', 'js-ie'));
 
 gulp.task('css', () => {
     return gulp.src(['src/css/**/*.css',
