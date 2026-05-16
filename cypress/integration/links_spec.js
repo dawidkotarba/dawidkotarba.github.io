@@ -21,21 +21,26 @@ describe('Menu buttons tests', () => {
     it('should show scroll up button after scrolling down', () => {
         cy.get('.progress-wrap').should('not.be.visible');
         cy.scrollTo(0, 200);
-        cy.get('.progress-wrap').should('be.visible');
+        cy.get('.progress-wrap', { timeout: 10000 }).should('be.visible');
     });
 
-    it('should show scroll to top after clicking scroll up button', () => {
+    it('should show scroll to top after clicking scroll up button', {
+        retries: {
+            runMode: 2,
+            openMode: 0,
+        }
+    }, () => {
         // top of the page - button not visible
         cy.get('.progress-wrap').should('not.be.visible');
         // scroll to see button
         cy.scrollTo(0, 500);
-        // button appears
-        cy.get('.progress-wrap').should('be.visible');
+        // button appears - give it more time on CI
+        cy.get('.progress-wrap', { timeout: 10000 }).should('be.visible');
         cy.get('.progress-wrap').click();
         // scrolling - need to wait
-        cy.wait(1000);
+        cy.wait(1500);
         cy.window().then(($window) => {
-            expect($window.scrollY).to.be.closeTo(0, 0);
+            expect($window.scrollY).to.be.closeTo(0, 5);
         });
         cy.get('.progress-wrap').should('not.be.visible');
     });

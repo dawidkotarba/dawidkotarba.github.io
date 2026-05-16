@@ -11,6 +11,7 @@ This file provides architectural guidance, conventions, and workflows for AI age
 - **Frontend:** Vanilla JavaScript/jQuery with SCSS. Avoid introducing heavy frameworks unless requested.
 - **CI/CD:** GitHub Actions (defined in `.github/workflows/deploy.yml`) handles building and deployment to GitHub Pages.
 - **Testing:** **Cypress** is used for end-to-end testing. Always run `npm run test` before proposing changes.
+    - Note: Retries are enabled in `cypress.json` to handle potential flakiness in CI environments (e.g., scroll-based animations).
 
 ## Development Workflow
 1.  **Source vs Dist:** Edit files in `src/`. Do NOT edit files in `dist/` directly, as they are overwritten by Gulp.
