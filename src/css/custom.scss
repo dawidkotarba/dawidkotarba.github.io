@@ -360,4 +360,58 @@
   }
 }
 
+// Glassmorphism for the sticky top navigation
+@media screen and (min-width: $desktop-size) {
+  .site-navigation-fixed.navigation-top {
+    background: rgba(255, 255, 255, 0.4) !important; 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  }
+}
+
+// Glassmorphism transition overlay for parallax images
+.panel-image {
+  position: relative;
+  height: 50vh !important;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px; // Increase overlap to hide any gap
+    left: 0;
+    right: 0;
+    height: 125px; // Slightly larger to compensate
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1;
+  }
+}
+
+// Interactive effect for footer social links
+#menu-socials a {
+  transition: all 0.3s ease;
+  display: inline-block;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.2);
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
+  }
+}
+
 
