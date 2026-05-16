@@ -3381,13 +3381,13 @@ p > object:only-child {
 
 	.has-sidebar:not(.error404) #primary {
 		float: left;
-		width: 58%;
+		width: 70%;
 	}
 
 	.has-sidebar #secondary {
 		float: right;
 		padding-top: 0;
-		width: 36%;
+		width: 25%;
 	}
 
 	.error404 #primary {
@@ -3764,12 +3764,12 @@ p > object:only-child {
 
 	.page-two-column .panel-content .entry-header {
 		float: left;
-		width: 36%;
+		width: 25%;
 	}
 
 	.page-two-column .panel-content .entry-content {
 		float: right;
-		width: 58%;
+		width: 70%;
 	}
 
 	/* Front Page - Recent Posts */
@@ -3777,7 +3777,7 @@ p > object:only-child {
 	.page-two-column .panel-content .recent-posts {
 		clear: right;
 		float: right;
-		width: 58%;
+		width: 70%;
 	}
 
 	.panel-content .recent-posts article {
@@ -3848,7 +3848,7 @@ p > object:only-child {
 	body.page-two-column:not(.archive) #primary .entry-header,
 	body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
 		float: left;
-		width: 36%;
+		width: 25%;
 	}
 
 	.blog:not(.has-sidebar) #primary article,
@@ -3859,7 +3859,7 @@ p > object:only-child {
 	body.page-two-column:not(.archive) #primary .entry-content,
 	body.page-two-column #comments {
 		float: right;
-		width: 58%;
+		width: 70%;
 	}
 
 	.blog .site-main > article,
@@ -3871,7 +3871,7 @@ p > object:only-child {
 	.navigation.pagination {
 		clear: both;
 		float: right;
-		width: 58%;
+		width: 70%;
 	}
 
 	.has-sidebar .navigation.pagination,
@@ -3939,8 +3939,8 @@ p > object:only-child {
 	.twentyseventeen-front-page.page-two-column .entry-content blockquote.alignleft,
 	.archive:not(.has-sidebar) .entry-content blockquote.alignleft,
 	.page-two-column .entry-content blockquote.alignleft {
-		margin-left: -72.5%;
-		width: 62%;
+		margin-left: -42.85%;
+		width: 42.85%;
 	}
 
 	.blog:not(.has-sidebar) .entry-content blockquote.alignright,
@@ -3948,7 +3948,7 @@ p > object:only-child {
 	.archive:not(.has-sidebar) .entry-content blockquote.alignright,
 	.page-two-column .entry-content blockquote.alignright {
 		margin-right: 0;
-		width: 36%;
+		width: 25%;
 	}
 
 	/* Post formats */
@@ -4036,29 +4036,29 @@ p > object:only-child {
 
 	.site-footer .widget-column.footer-widget-1 {
 		float: left;
-		width: 36%;
+		width: 25%;
 	}
 
 	.site-footer .widget-column.footer-widget-2 {
 		float: right;
-		width: 58%;
+		width: 70%;
 	}
 
 	.social-navigation {
 		clear: left;
 		float: left;
 		margin-bottom: 0;
-		width: 36%;
+		width: 25%;
 	}
 
 	.site-info {
 		float: left;
 		padding: 0.7em 0 0;
-		width: 58%;
+		width: 70%;
 	}
 
 	.social-navigation + .site-info {
-		margin-left: 6%;
+		margin-left: 5%;
 	}
 
 	.site-info .sep {
