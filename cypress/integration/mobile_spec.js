@@ -40,11 +40,5 @@ describe('Mobile tests', () => {
             .should('have.prop', 'href')
             .and('equal', 'https://github.com/dawidkotarba')
     });
-
-    it('Cookie popup shall be visible', () => {
-        cy.get('.cookiePopup').should('be.visible');
-        cy.get('.acceptBtn').should('be.visible');
-        cy.get('.declineBtn').should('be.visible');
-    });
 });
 

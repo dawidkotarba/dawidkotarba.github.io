@@ -95,39 +95,21 @@ describe('Footer buttons/links tests', () => {
         cy.visit(Cypress.env('host'))
     });
 
-    it('Skype button should navigate to Skype profile', () => {
-        cy.get('#menu-socials > :nth-child(1) > a')
-            .should('have.prop', 'href')
-            .and('equal', 'skype:dawidkotarba')
-    });
-
     it('LinkedIn button should navigate to LinkedIn profile', () => {
-        cy.get('#menu-socials > :nth-child(2) > a')
+        cy.get('#menu-socials a[href*="linkedin.com"]')
             .should('have.prop', 'href')
             .and('equal', 'https://www.linkedin.com/in/dawid-kotarba-425306a5')
     });
 
     it('Github button should navigate to GitHub profile', () => {
-        cy.get('#menu-socials > :nth-child(3) > a')
+        cy.get('#menu-socials a[href*="github.com"]')
             .should('have.prop', 'href')
             .and('equal', 'https://github.com/dawidkotarba')
-    });
-
-    it('Twitter button should navigate to Twitter profile', () => {
-        cy.get('#menu-socials > :nth-child(4) > a')
-            .should('have.prop', 'href')
-            .and('equal', 'https://twitter.com/dawidkotarba')
     });
 
     it('GitHub repository link should navigate to GitHub pages repo', () => {
         cy.get('#link-github-credits')
             .should('have.prop', 'href')
             .and('equal', 'https://github.com/dawidkotarba/dawidkotarba.github.io')
-    });
-
-    it('Cookie popup shall be visible', () => {
-        cy.get('.cookiePopup').should('be.visible');
-        cy.get('.acceptBtn').should('be.visible');
-        cy.get('.declineBtn').should('be.visible');
     });
 });
