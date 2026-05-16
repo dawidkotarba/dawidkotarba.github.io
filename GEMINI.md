@@ -20,7 +20,6 @@ This file provides architectural guidance, conventions, and workflows for AI age
 4.  **Dependencies:** Use `npm` for package management.
 
 ## Best Practices
-- **Performance:** Ensure images are optimized via Gulp's `img` task.
-- **Accessibility:** Maintain high ARIA standards and semantic HTML.
+- **Performance:** Maintain high ARIA standards and semantic HTML.
 - **Responsive Design:** Ensure changes are tested for mobile responsiveness (using Cypress `mobile_spec.js`).
 - **Clean Code:** Follow established naming conventions (kebab-case for CSS classes, camelCase for JS variables).

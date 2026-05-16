@@ -8,19 +8,11 @@ const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const minifyHtml = require('gulp-htmlmin');
 const browserSync = require('browser-sync').create();
-const imagemin = require('gulp-imagemin');
-const imageminGuetzli = require('imagemin-guetzli');
-const cache = require('gulp-cache');
 const { deleteSync } = require('del');
 const log = require('fancy-log');
 
 gulp.task('clean', (done) => {
     deleteSync('dist');
-    done();
-});
-
-gulp.task('clear-cache', (done) => {
-    cache.clearAll();
     done();
 });
 
@@ -76,18 +68,12 @@ gulp.task('css', () => {
 });
 
 gulp.task('img', () => {
-    return gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
-        .pipe(cache(imagemin([imageminGuetzli({
-            quality: 85
-        })])))
-        .pipe(cache(imagemin({
-            progressive: true
-        })))
+    return gulp.src('src/img/**/*.+(png|jpg|gif|svg)', { encoding: false })
         .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('favicon', () => {
-    return gulp.src('src/favicon/*.*')
+    return gulp.src('src/favicon/*.*', { encoding: false })
         .pipe(gulp.dest('dist/favicon'));
 });
 
@@ -126,7 +112,6 @@ gulp.task('browser-sync', (done) => {
     done();
 });
 
-gulp.task('buildWithoutImages', gulp.series('clean', gulp.parallel('js', 'css', 'favicon', 'html')));
 gulp.task('build', gulp.series('clean', gulp.parallel('js', 'css', 'img', 'favicon', 'html')));
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
 

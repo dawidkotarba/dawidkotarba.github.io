@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build (without images)
-        run: npx gulp buildWithoutImages --verbose
+      - name: Build
+        run: npx gulp build --verbose
 
       - name: Run Cypress tests
         run: npm run test
