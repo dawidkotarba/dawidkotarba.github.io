@@ -1,7 +1,6 @@
 describe('Mobile tests', () => {
 
     const menuSelector = '.menu-toggle';
-    const blogSelector = '#link-blog';
     const linkedInSelector = '#link-linkedin';
     const gitHubSelector = '#link-github';
 
@@ -11,31 +10,20 @@ describe('Mobile tests', () => {
     });
 
     it('Menu should toggle on and off', () => {
-        cy.get(blogSelector).should('not.be.visible');
         cy.get(linkedInSelector).should('not.be.visible');
         cy.get(gitHubSelector).should('not.be.visible');
 
         cy.get(menuSelector).click();
 
-        cy.get(blogSelector).should('be.visible');
         cy.get(linkedInSelector).should('be.visible');
         cy.get(gitHubSelector).should('be.visible');
 
         cy.get(menuSelector).click();
 
-        cy.get(blogSelector).should('not.be.visible');
         cy.get(linkedInSelector).should('not.be.visible');
         cy.get(gitHubSelector).should('not.be.visible');
     });
 
-
-    it('Blog menu button should navigate to localhost', () => {
-        cy.get(menuSelector).click();
-        cy.get(blogSelector).should('be.visible');
-        cy.get(blogSelector)
-            .should('have.prop', 'href')
-            .and('contains', 'unknownexception.eu')
-    });
 
     it('LinkedIn menu button should navigate to LinkedIn profile', () => {
         cy.get(menuSelector).click();

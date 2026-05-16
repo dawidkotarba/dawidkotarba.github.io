@@ -46,12 +46,6 @@ describe('Menu buttons tests', () => {
             .and('contains', 'localhost')
     });
 
-    it('Blog menu button should navigate to blog page', () => {
-        cy.get('#link-blog')
-            .should('have.prop', 'href')
-            .and('equal', 'https://unknownexception.eu/')
-    });
-
     it('LinkedIn menu button should navigate to LinkedIn profile', () => {
         cy.get('#link-linkedin')
             .should('have.prop', 'href')
