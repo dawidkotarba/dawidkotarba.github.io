@@ -102,6 +102,8 @@ describe('Footer buttons/links tests', () => {
     });
 
     it('Cookie popup shall be visible', () => {
-        cy.get('body > div.cookieconsent').should('be.visible');
+        cy.get('.cookiePopup').should('be.visible');
+        cy.get('.acceptBtn').should('be.visible');
+        cy.get('.declineBtn').should('be.visible');
     });
 });

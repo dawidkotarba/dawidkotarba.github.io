@@ -1,10 +1,16 @@
-if (document.location.hostname.search("dawidkotarba.eu") !== -1) {
-    window.dataLayer = window.dataLayer || [];
+window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
+function gtag() {
+    dataLayer.push(arguments);
+}
 
-    gtag('js', new Date());
+// Default consent state to denied
+gtag('consent', 'default', {
+    'analytics_storage': 'denied'
+});
+
+gtag('js', new Date());
+
+if (document.location.hostname.search("dawidkotarba.eu") !== -1 || document.location.hostname === 'localhost') {
     gtag('config', 'UA-159312468-1');
 }

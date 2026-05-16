@@ -294,15 +294,35 @@
 
 .cookiePopup {
   position: fixed;
-  padding: 10px;
+  padding: 15px;
   left: 0;
   bottom: 0;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #FFF;
   text-align: center;
   width: 100%;
   z-index: 99999;
   font-family: 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  @media screen and (min-width: $desktop-size) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.cookieActions {
+  display: flex;
+  gap: 10px;
 }
 
 .cookieBtn {
@@ -311,10 +331,12 @@
   display: inline-block;
   cursor: pointer;
   color: #000000;
-  font-size: 16px;
-  padding: 1px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 15px;
   text-decoration: none;
-  margin-left: 10px;
+  border: none;
+  white-space: nowrap;
 
   &:hover {
     background-color: #f2f2f2;
@@ -325,5 +347,15 @@
     text-decoration: none;
     position: relative;
     top: 1px;
+  }
+
+  &.declineBtn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 }
