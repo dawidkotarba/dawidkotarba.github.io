@@ -30,7 +30,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^3.0.4",
     "cypress": "^4.5.0",
     "del": "^5.1.0",
     "fancy-log": "^2.0.0",
