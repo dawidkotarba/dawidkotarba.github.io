@@ -44,10 +44,42 @@
   padding-bottom: 20px
 }
 
-.navigation-top a:hover {
-  -webkit-transition: color 1s;
-  transition: color 1s;
-  color: #006ac7 !important;
+.navigation-top a:not(.menu-scroll-down), #link-github-credits {
+  position: relative;
+  transition: all 0.3s ease;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+#link-linkedin:hover {
+  color: $color-blue !important;
+}
+
+#link-github:hover, #link-github-credits:hover {
+  color: $color-purple !important;
+}
+
+#scroll-down-arrow {
+  &:hover {
+    color: $color-green !important;
+    transform: scale(1.4); // keep scale for arrow as it's a different type of button
+  }
 }
 
 .menu-scroll-down {
