@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gulp build",
     "test-firefox": "cypress run --headless --browser firefox --env host=index.html",
-    "test-chrome": "cypress run --headless --browser chrome --env host=index.html",
+    "test-chrome": "cypress run --headless --browser electron --env host=index.html",
     "testall": "npm run test-firefox && npm run test-chrome",
     "test": "npm run test-chrome",
     "test-firefox-prod": "cypress run --headless --browser firefox --env host=https://dawidkotarba.eu",
@@ -42,7 +42,9 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.62.1"
+    "rxjs": "^7.8.2",
+    "sass": "^1.62.1",
+    "zen-observable": "^0.10.0"
   },
   "dependencies": {
     "animate.css": "^3.7.2",
