@@ -1,4 +1,4 @@
-@import 'constants.scss';
+@use 'constants' as *;
 
 // Header image
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {

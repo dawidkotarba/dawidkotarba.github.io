@@ -24,25 +24,36 @@ My resume, under construction. Forever :)
 
 Images from Unsplash, authors are credited in the image name.
 
-### Run:
-1. Install dependencies:
-```bash
-npm install
-```
+### Commands:
 
-2. Build the project:
-```bash
-npm run build
-```
+All common tasks can be executed using `npm`:
 
-3. Development (live reload):
-```bash
-npx gulp serve
-```
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Other Gulp tasks: `npx gulp watch`, `npx gulp clean`.
+2. **Standard Build:** (compiles JS, SCSS, images, and HTML to `dist/`)
+   ```bash
+   npm run build
+   ```
 
-For a `npx gulp serve` on Linux, you may need to increase the inotify watch limit:
+3. **Clean Build (rebuild):** (removes `node_modules`, `dist`, and re-installs everything - used for troubleshooting)
+   ```bash
+   npm run rebuild
+   ```
+
+4. **Development (live reload):** (starts a local server and watches for changes)
+   ```bash
+   npm run serve
+   ```
+
+5. **Clean:** (removes the `dist` folder)
+   ```bash
+   npm run clean
+   ```
+
+For a `npm run serve` on Linux, you may need to increase the inotify watch limit:
 ```bash
 sudo vim /etc/sysctl.conf
 ```
@@ -61,4 +72,4 @@ npm run cypress
 Firefox has to be installed as it is used in headless mode.
 
 ### Git hooks:
-Execute install.sh from githooks folder
+Execute `install.sh` from `githooks` folder

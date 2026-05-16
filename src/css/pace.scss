@@ -1,4 +1,4 @@
-@import 'constants.scss';
+@use 'constants' as *;
 
 .pace {
   -webkit-pointer-events: none;
