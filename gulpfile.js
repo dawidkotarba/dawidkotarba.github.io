@@ -24,10 +24,8 @@ gulp.task('clear-cache', (done) => {
     done();
 });
 
-// cookie-popup.js has to go first, before navigation
-// custom.js has to go last
-gulp.task('js', (done) => {
-    gulp.src(['src/js/pace.min.js',
+gulp.task('js-main', () => {
+    return gulp.src(['src/js/pace.min.js',
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/jquery.scrollto/jquery.scrollTo.min.js',
         'node_modules/aos/dist/aos.js',
@@ -54,24 +52,28 @@ gulp.task('js', (done) => {
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
+});
 
-    gulp.src('src/js/ie-check.js')
+gulp.task('js-ie', () => {
+    return gulp.src('src/js/ie-check.js')
         .pipe(concat('ie-check.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
+});
 
-    gulp.src('src/js/ga.js')
+gulp.task('js-ga', () => {
+    return gulp.src('src/js/ga.js')
         .pipe(concat('ga.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
-
-    done();
 });
 
-gulp.task('css', (done) => {
-    gulp.src(['src/css/**/*.css',
+gulp.task('js', gulp.parallel('js-main', 'js-ie', 'js-ga'));
+
+gulp.task('css', () => {
+    return gulp.src(['src/css/**/*.css',
         'src/css/**/*.scss',
         'node_modules/aos/dist/aos.css',
         'node_modules/animate.css/animate.min.css'])
@@ -80,12 +82,10 @@ gulp.task('css', (done) => {
         .pipe(cleanCss())
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
-
-    done();
 });
 
-gulp.task('img', (done) => {
-    gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
+gulp.task('img', () => {
+    return gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
         .pipe(cache(imagemin([imageminGuetzli({
             quality: 85
         })])))
@@ -93,28 +93,21 @@ gulp.task('img', (done) => {
             progressive: true
         })))
         .pipe(gulp.dest('dist/img'));
-
-    done();
 });
 
-gulp.task('favicon', (done) => {
-    gulp.src('src/favicon/*.*')
+gulp.task('favicon', () => {
+    return gulp.src('src/favicon/*.*')
         .pipe(gulp.dest('dist/favicon'));
-
-    done();
 });
 
-gulp.task('html', (done) => {
-    gulp.src(['index_dev.html'])
-
+gulp.task('html', () => {
+    return gulp.src(['index_dev.html'])
         .pipe(minifyHtml({
             collapseWhitespace: true,
             removeComments: true
         }))
         .pipe(rename({basename: 'index'}))
         .pipe(gulp.dest('./'));
-
-    done();
 });
 
 gulp.task('watch', (done) => {
@@ -142,10 +135,11 @@ gulp.task('browser-sync', (done) => {
     done();
 });
 
-gulp.task('buildWithoutImages', gulp.parallel('clean', 'js', 'css', 'favicon', 'html'));
-gulp.task('build', gulp.parallel('clean', 'js', 'css', 'img', 'favicon', 'html'));
+gulp.task('buildWithoutImages', gulp.series('clean', gulp.parallel('js', 'css', 'favicon', 'html')));
+gulp.task('build', gulp.series('clean', gulp.parallel('js', 'css', 'img', 'favicon', 'html')));
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
-gulp.task('default', gulp.series('buildWithoutImages', (done) => {
+
+gulp.task('default', gulp.series('build', (done) => {
     log("Waiting 2 secs to run browser...");
     setTimeout(() => {
         (gulp.series('serve')());
