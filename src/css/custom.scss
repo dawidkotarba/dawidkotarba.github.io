@@ -44,11 +44,12 @@
   padding-bottom: 20px
 }
 
-.navigation-top a:not(.menu-scroll-down) {
+.navigation-top a:not(.menu-scroll-down), #link-github-credits {
   position: relative;
   transition: all 0.3s ease;
   display: inline-block;
   text-decoration: none !important;
+  border-bottom: none !important; // Remove persistent theme line
 
   &::after {
     content: '';
@@ -70,11 +71,7 @@
 }
 
 #link-github-credits {
-  transition: all 0.3s ease;
-  text-decoration: none !important;
-  
   &:hover {
-    box-shadow: none !important;
     color: $color-purple !important;
   }
 }
