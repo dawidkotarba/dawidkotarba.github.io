@@ -165,6 +165,14 @@
   color: $color-yellow !important;
 }
 
+.color-celadon {
+  color: $color-celadon !important;
+}
+
+.color-black {
+  color: $color-black !important;
+}
+
 .more-details {
   font-style: italic;
   color: grey;
@@ -195,6 +203,14 @@
 
   &-yellow {
     border: 2px solid $color-yellow;
+  }
+
+  &-celadon {
+    border: 2px solid $color-celadon;
+  }
+
+  &-black {
+    border: 2px solid $color-black;
   }
 }
 
