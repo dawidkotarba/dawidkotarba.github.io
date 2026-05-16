@@ -44,7 +44,7 @@
   padding-bottom: 20px
 }
 
-.navigation-top a:not(.menu-scroll-down), #link-github-credits {
+.navigation-top a:not(.menu-scroll-down) {
   position: relative;
   transition: all 0.3s ease;
   display: inline-block;
@@ -66,6 +66,16 @@
     &::after {
       width: 100%;
     }
+  }
+}
+
+#link-github-credits {
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  
+  &:hover {
+    box-shadow: none !important;
+    color: $color-purple !important;
   }
 }
 
