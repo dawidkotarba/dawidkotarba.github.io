@@ -15,15 +15,15 @@
 // Header image
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
   height: 40vh;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   overflow: hidden;
 }
 
 // Content images
 .panel-image {
   height: 40vh !important;
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -35,13 +35,13 @@
 @media screen and (min-width: $desktop-size) {
   .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
     height: 80vh;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
   }
 
   .panel-image {
     height: 65vh !important;
-    border-radius: 24px;
+    border-radius: 30px;
   }
 }
 
@@ -69,8 +69,8 @@
 }
 
 .site-navigation-fixed.navigation-top {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .navigation-top a:not(.menu-scroll-down), #link-github-credits {
@@ -478,8 +478,8 @@
 // Glassmorphism for the sticky top navigation
 @media screen and (min-width: $desktop-size) {
   .site-navigation-fixed.navigation-top {
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     background: rgba(255, 255, 255, 0.3) !important; // Even more transparent
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
