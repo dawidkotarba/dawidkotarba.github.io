@@ -15,8 +15,6 @@
 // Header image
 .has-header-image.twentyseventeen-front-page .custom-header, .has-header-video.twentyseventeen-front-page .custom-header, .has-header-image.home.blog .custom-header, .has-header-video.home.blog .custom-header {
   height: 40vh;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   overflow: hidden;
 }
 
@@ -69,8 +67,8 @@
 }
 
 .site-navigation-fixed.navigation-top {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .navigation-top a:not(.menu-scroll-down), #link-github-credits {
