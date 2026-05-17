@@ -1,6 +1,8 @@
 // toggle commercial experience
 $('.employment-card').click(function () {
-    $(this).toggleClass('employment-card-clicked');
+    if ($(window).width() >= 768) {
+        $(this).toggleClass('employment-card-clicked');
+    }
 });
 
 // title parallax effect on scroll

@@ -290,82 +290,100 @@
 .border {
   &-blue {
     border: 2px solid $color-blue;
-    &.employment-card-clicked {
-      border-width: 3px;
-      --glow-color: #{rgba($color-blue, 0.5)};
-      animation: glow-pulse 3s infinite ease-in-out;
+    @media screen and (min-width: $desktop-size) {
+      &.employment-card-clicked {
+        border-width: 3px;
+        --glow-color: #{rgba($color-blue, 0.5)};
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
     }
   }
 
   &-purple {
     border: 2px solid $color-purple;
-    &.employment-card-clicked {
-      border-width: 3px;
-      --glow-color: #{rgba($color-purple, 0.5)};
-      animation: glow-pulse 3s infinite ease-in-out;
+    @media screen and (min-width: $desktop-size) {
+      &.employment-card-clicked {
+        border-width: 3px;
+        --glow-color: #{rgba($color-purple, 0.5)};
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
     }
   }
 
   &-green {
     border: 2px solid $color-green;
-    &.employment-card-clicked {
-      border-width: 3px;
-      --glow-color: #{rgba($color-green, 0.5)};
-      animation: glow-pulse 3s infinite ease-in-out;
+    @media screen and (min-width: $desktop-size) {
+      &.employment-card-clicked {
+        border-width: 3px;
+        --glow-color: #{rgba($color-green, 0.5)};
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
     }
   }
 
   &-yellow {
     border: 2px solid $color-yellow;
-    &.employment-card-clicked {
-      border-width: 3px;
-      --glow-color: #{rgba($color-yellow, 0.5)};
-      animation: glow-pulse 3s infinite ease-in-out;
+    @media screen and (min-width: $desktop-size) {
+      &.employment-card-clicked {
+        border-width: 3px;
+        --glow-color: #{rgba($color-yellow, 0.5)};
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
     }
   }
 
   &-indigo {
     border: 2px solid $color-indigo;
-    &.employment-card-clicked {
-      border-width: 3px;
-      --glow-color: #{rgba($color-indigo, 0.5)};
-      animation: glow-pulse 3s infinite ease-in-out;
+    @media screen and (min-width: $desktop-size) {
+      &.employment-card-clicked {
+        border-width: 3px;
+        --glow-color: #{rgba($color-indigo, 0.5)};
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
     }
   }
 
   &-black {
     border: 2px solid $color-black;
-    &.employment-card-clicked {
-      border-width: 3px;
-      --glow-color: #{rgba($color-black, 0.5)};
-      animation: glow-pulse 3s infinite ease-in-out;
+    @media screen and (min-width: $desktop-size) {
+      &.employment-card-clicked {
+        border-width: 3px;
+        --glow-color: #{rgba($color-black, 0.5)};
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
     }
   }
 
   &-red {
     border: 2px solid $color-red;
-    &.employment-card-clicked {
-      border-width: 3px;
-      --glow-color: #{rgba($color-red, 0.5)};
-      animation: glow-pulse 3s infinite ease-in-out;
+    @media screen and (min-width: $desktop-size) {
+      &.employment-card-clicked {
+        border-width: 3px;
+        --glow-color: #{rgba($color-red, 0.5)};
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
     }
   }
 
   &-orange {
     border: 2px solid $color-orange;
-    &.employment-card-clicked {
-      border-width: 3px;
-      --glow-color: #{rgba($color-orange, 0.5)};
-      animation: glow-pulse 3s infinite ease-in-out;
+    @media screen and (min-width: $desktop-size) {
+      &.employment-card-clicked {
+        border-width: 3px;
+        --glow-color: #{rgba($color-orange, 0.5)};
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
     }
   }
 
   &-cyan {
     border: 2px solid $color-cyan;
-    &.employment-card-clicked {
-      border-width: 3px;
-      --glow-color: #{rgba($color-cyan, 0.5)};
-      animation: glow-pulse 3s infinite ease-in-out;
+    @media screen and (min-width: $desktop-size) {
+      &.employment-card-clicked {
+        border-width: 3px;
+        --glow-color: #{rgba($color-cyan, 0.5)};
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
     }
   }
 }
