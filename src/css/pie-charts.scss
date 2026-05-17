@@ -6,13 +6,16 @@ $chart-size: 130px; // change also in custom.js
   width: $chart-size;
   height: $chart-size;
   text-align: center;
-  transition: transform 0.5s, filter 0.5s;
+  transition: transform 0.5s, filter 0.5s, box-shadow 0.5s;
   margin: 50px 20px;
   font-size: small;
+  background-color: white;
+  border-radius: 50%;
 
   &:hover {
     transform: scale(1.2);
     filter: saturate(250%);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 
     canvas {
       transform: rotate(360deg);
@@ -22,6 +25,7 @@ $chart-size: 130px; // change also in custom.js
   &:active {
     transform: scale(1.1);
     filter: saturate(180%);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 
     canvas {
       transform: rotate(360deg);
