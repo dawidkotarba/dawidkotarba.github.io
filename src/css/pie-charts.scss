@@ -24,6 +24,7 @@ $chart-size: 130px; // change also in custom.js
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 
     canvas {
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       transform: rotate(360deg);
     }
   }
@@ -34,8 +35,8 @@ $chart-size: 130px; // change also in custom.js
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 
     canvas {
-      transition: transform 0.2s linear;
-      transform: rotate(3600deg); // Rotate many times while held
+      transition: transform 2s linear; // Much slower linear spin while held
+      transform: rotate(1080deg); // 3 full turns instead of 10
     }
   }
 
@@ -49,6 +50,6 @@ $chart-size: 130px; // change also in custom.js
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 2s cubic-bezier(0.1, 0.9, 0.3, 1); // Slow down / inertia effect on release
   }
 }
