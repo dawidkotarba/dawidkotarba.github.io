@@ -1,5 +1,10 @@
 $chart-size: 130px; // change also in custom.js
 
+@keyframes spin-fast {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .chart {
   position: relative;
   display: inline-block;
@@ -11,6 +16,7 @@ $chart-size: 130px; // change also in custom.js
   font-size: small;
   background-color: white;
   border-radius: 50%;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.2);
@@ -28,7 +34,8 @@ $chart-size: 130px; // change also in custom.js
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 
     canvas {
-      transform: rotate(360deg);
+      transition: transform 0.2s linear;
+      transform: rotate(3600deg); // Rotate many times while held
     }
   }
 
