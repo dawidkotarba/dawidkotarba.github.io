@@ -92,6 +92,33 @@ describe('Menu buttons tests', () => {
         cy.get('#employment-epam').should('have.class', 'border-indigo');
         cy.get('#employment-epam .employer').should('contain', 'EPAM Systems');
     });
+
+    it('Header and Navigation should have rounded corners on desktop', () => {
+        cy.viewport(1200, 800);
+        cy.get('.custom-header').should('have.css', 'border-bottom-left-radius').and('not.eq', '0px');
+        cy.scrollTo(0, 1000); // Navigation becomes fixed
+        cy.get('.navigation-top').should('have.class', 'site-navigation-fixed');
+        cy.get('.navigation-top').should('have.css', 'border-bottom-left-radius').and('not.eq', '0px');
+    });
+
+    it('Experience cards should be clickable on desktop', () => {
+        cy.viewport(1200, 800);
+        cy.get('#employment-ubs').scrollIntoView();
+        cy.get('#employment-ubs').should('not.have.class', 'employment-card-clicked');
+        cy.get('#employment-ubs').click({ force: true });
+        cy.get('#employment-ubs').should('have.class', 'employment-card-clicked');
+    });
+
+    it('Navigation should be sticky on desktop', () => {
+        cy.viewport(1200, 800);
+        cy.scrollTo(0, 800);
+        cy.get('.navigation-top').should('have.class', 'site-navigation-fixed');
+        cy.get('.navigation-top').should('be.visible');
+        cy.get('.navigation-top').then(($nav) => {
+            const rect = $nav[0].getBoundingClientRect();
+            expect(rect.top).to.be.at.most(1);
+        });
+    });
 });
 
 describe('Footer buttons/links tests', () => {
