@@ -475,6 +475,10 @@
   }
 }
 
+.site-footer {
+  border-top: none !important;
+}
+
 // Glassmorphism for the sticky top navigation
 @media screen and (min-width: $desktop-size) {
   .site-navigation-fixed.navigation-top {
