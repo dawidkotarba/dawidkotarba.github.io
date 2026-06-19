@@ -29,7 +29,7 @@
   "homepage": "https://github.com/dawidkotarba/dawidkotarba.github.io#readme",
   "devDependencies": {
     "@babel/core": "^7.29.7",
-    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-env": "^8.0.2",
     "animate.css": "^4.1.1",
     "browser-sync": "^3.0.4",
     "cypress": "^15.17.0",
